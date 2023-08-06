@@ -8,7 +8,8 @@ const ProductDetail = async ({ params }) => {
   const slug = params.product_slug;
   const file_url = process.env.STORAGE_URL;
   const res = await axiosClient.post(`/product/detail`, { slug });
-  const { title, summary, description, photo } = res.data.product_detail;
+  const { title, summary, description, photo, images } =
+    res.data.product_detail;
   const related_products = res.data.product_detail.rel_prods;
   const brands = res.data.brands;
 
@@ -32,7 +33,7 @@ const ProductDetail = async ({ params }) => {
           <div className="row">
             <div className="col-lg-12">
               <div className="section-title_area">
-                <h3>Product's Details</h3>
+                <div className="gradient-title">Product's Details</div>
               </div>
             </div>
           </div>
@@ -44,7 +45,11 @@ const ProductDetail = async ({ params }) => {
             <div className="container">
               <div className="row">
                 <div className="col-lg-5">
-                  <ProductComponent />
+                  <ProductComponent
+                    photo={photo}
+                    file_url={file_url}
+                    images={images}
+                  />
                   <div className="sp-img_area">
                     <div className="sp-img_slider slick-img-slider uren-slick-slider"></div>
                     <div className="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3"></div>
@@ -266,8 +271,7 @@ const ProductDetail = async ({ params }) => {
           <div className="row">
             <div className="col-lg-12">
               <div className="section-title_area">
-                {/* <span>Top New On This Week</span> */}
-                <h3>Related Products</h3>
+                <div className="gradient-title">Related Products</div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-4 p-4">
@@ -286,7 +290,7 @@ const ProductDetail = async ({ params }) => {
       <div className="uren-brand_area">
         <div className="container-fluid">
           <div className="section-title_area">
-            <h3>Top Partners</h3>
+            <div className="gradient-title">Top Partners</div>
           </div>
           <div className="row">
             <div className="col-lg-12">

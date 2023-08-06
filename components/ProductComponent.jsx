@@ -1,15 +1,15 @@
 "use client";
 import React, { useState } from "react";
 
-const ProductComponent = () => {
+const ProductComponent = ({ photo, file_url, images }) => {
   const [mainImage, setMainImage] = useState(0);
-  const images = [
-    "/assets/images/product/large-size/1.jpg",
-    "/assets/images/product/large-size/2.jpg",
-    "/assets/images/product/large-size/3.jpg",
-    "/assets/images/product/large-size/4.jpg",
-    // Add more image URLs as needed
-  ];
+  // const images = [
+  //   "/assets/images/product/large-size/1.jpg",
+  //   "/assets/images/product/large-size/2.jpg",
+  //   "/assets/images/product/large-size/3.jpg",
+  //   "/assets/images/product/large-size/4.jpg",
+  //   // Add more image URLs as needed
+  // ];
 
   const handlePrevious = () => {
     setMainImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
@@ -23,23 +23,25 @@ const ProductComponent = () => {
     <div className="product-detail-container">
       <div className="main-image-container">
         <img
-          src={images[mainImage]}
+          src={`${file_url}/${photo}`}
           alt={`Product Image ${mainImage + 1}`}
           className="main-image"
         />
       </div>
-      <div className="thumbnails">
-        {images.map((image, index) => (
-          <div key={index} className="image-card">
-            <img
-              src={image}
-              alt={`Product Image ${index + 1}`}
-              className={`thumbnail ${mainImage === index ? "active" : ""}`}
-              onClick={() => setMainImage(index)}
-            />
-          </div>
-        ))}
-      </div>
+      {images.length > 0 && (
+        <div className="thumbnails">
+          {images.map((image, index) => (
+            <div key={index} className="image-card">
+              <img
+                src={image.original_url}
+                alt={`Product Image ${index + 1}`}
+                className={`thumbnail ${mainImage === index ? "active" : ""}`}
+                onClick={() => setMainImage(index)}
+              />
+            </div>
+          ))}
+        </div>
+      )}
       {/* <div className="arrows">
         <span className="arrow left-arrow" onClick={handlePrevious}>
           {"<"}
