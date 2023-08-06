@@ -134,9 +134,7 @@ const ProductDetail = async ({ params }) => {
                     className="tab-pane active show"
                     role="tabpanel"
                   >
-                    <div className="product-description">
-                      {parse(description)}
-                    </div>
+                    <div className="product-description">{description}</div>
                   </div>
                   <div id="specification" className="tab-pane" role="tabpanel">
                     <table className="table table-bordered specification-inner_stuff">
