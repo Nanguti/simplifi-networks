@@ -135,11 +135,7 @@ const Products = () => {
               <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
                 {products.map((product) => (
                   <div className="col-lg-4" key={product.id}>
-                    <ProductCard
-                      product={product}
-                      file_url={file_url}
-                      type="normal"
-                    />
+                    <ProductCard product={product} type="normal" />
                   </div>
                 ))}
               </div>
@@ -151,7 +147,7 @@ const Products = () => {
                         <ul className="uren-pagination-box primary-color">
                           <li>
                             <a
-                              className="Previous"
+                              className="cursor-pointer"
                               onClick={() =>
                                 fetchProducts(
                                   `/products?page=${currentPage - 1}`
@@ -168,6 +164,7 @@ const Products = () => {
 
                           <li>
                             <a
+                              className="cursor-pointer"
                               onClick={() =>
                                 fetchProducts(
                                   `/products?page=${currentPage + 1}`

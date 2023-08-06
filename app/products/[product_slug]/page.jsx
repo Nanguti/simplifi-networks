@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 
 const ProductDetail = async ({ params }) => {
   const slug = params.product_slug;
-  const file_url = process.env.STORAGE_URL;
+  const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
   const res = await axiosClient.post(`/product/detail`, { slug });
   const { title, summary, description, photo, images } =
     res.data.product_detail;

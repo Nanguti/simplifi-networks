@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
-const ProductComponent = ({ photo, file_url, images }) => {
+const ProductComponent = ({ photo, images }) => {
+  const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
   const [mainImage, setMainImage] = useState(0);
   // const images = [
   //   "/assets/images/product/large-size/1.jpg",
