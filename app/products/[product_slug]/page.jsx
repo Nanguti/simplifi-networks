@@ -2,6 +2,7 @@ import Brands from "@/components/Brands";
 import RelatedProducts from "@/components/RelatedProduct";
 import axiosClient from "@/utils/axios";
 import ProductComponent from "@/components/ProductComponent";
+import parse from "html-react-parser";
 
 const ProductDetail = async ({ params }) => {
   const slug = params.product_slug;
@@ -57,7 +58,7 @@ const ProductDetail = async ({ params }) => {
                       </h5>
                     </div>
                     <div className="sp-essential_stuff">
-                      <p>{summary}</p>
+                      <p>{parse(summary)}</p>
                     </div>
                     <div className="uren-tag-line">
                       <h6>Share:</h6>

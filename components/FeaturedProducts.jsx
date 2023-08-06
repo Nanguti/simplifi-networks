@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
+import parse from "html-react-parser";
 
 const FeaturedProducts = ({ products, file_url }) => {
   const sliderRef = useRef(null);
@@ -66,10 +67,10 @@ const FeaturedProducts = ({ products, file_url }) => {
                   onClick={() => handleProductDetail(product.slug)}
                   className="cursor-pointer"
                 >
-                  {product.title}
+                  {parse(product.title)}
                 </a>
               </h3>
-              <p>{product.summary}</p>
+              <p>{parse(product.summary)}</p>
               <div className="uren-btn-ps_left">
                 <a
                   className="uren-btn cursor-pointer"
