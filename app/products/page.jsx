@@ -5,7 +5,7 @@ import axiosClient from "@/utils/axios";
 import { useState, useEffect } from "react";
 export const revalidate = 0;
 const Products = () => {
-  const file_url = "/storage";
+  const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
   //const res = await axiosClient.get(`/products`);
   // const products = res.data.products;
 
@@ -19,7 +19,6 @@ const Products = () => {
   const fetchProducts = async (url) => {
     try {
       const response = await axiosClient.get(url);
-      console.log("response here-> " + response.data.products.current_page);
       setProducts(response.data.products.data);
       setCurrentPage(response.data.products.current_page);
     } catch (error) {
