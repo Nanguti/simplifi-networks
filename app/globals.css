@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override the default Carousel styles */
+.carousel-root {
+    max-width: 100%;
+  }
+  
+  .carousel .slide {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Animate the text message */
+  .slide-enter-done .legend {
+    opacity: 1;
+  }
+  
+  .slide-exit .legend {
+    opacity: 0;
+  }
+
+
+  
+  
