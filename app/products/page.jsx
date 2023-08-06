@@ -1,11 +1,31 @@
+"use client";
 import ProductCard from "@/components/ProductCard";
 import Sidebar from "@/components/Sidebar";
 import axiosClient from "@/utils/axios";
+import { useState, useEffect } from "react";
 export const revalidate = 0;
-const Products = async () => {
+const Products = () => {
   const file_url = process.env.STORAGE_URL;
-  const res = await axiosClient.get(`/products`);
-  const products = res.data.products;
+  //const res = await axiosClient.get(`/products`);
+  // const products = res.data.products;
+
+  const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    fetchProducts("/products?page=1");
+  }, []);
+
+  const fetchProducts = async (url) => {
+    try {
+      const response = await axiosClient.get(url);
+      console.log("response here-> " + response.data.products.current_page);
+      setProducts(response.data.products.data);
+      setCurrentPage(response.data.products.current_page);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
   return (
     <>
       <div className="breadcrumb-area">
@@ -130,23 +150,31 @@ const Products = async () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <ul className="uren-pagination-box primary-color">
+                          <li>
+                            <a
+                              className="Previous"
+                              onClick={() =>
+                                fetchProducts(
+                                  `/products?page=${currentPage - 1}`
+                                )
+                              }
+                              disabled={currentPage === 1}
+                            >
+                              Previous
+                            </a>
+                          </li>
                           <li className="active">
-                            <a href="javascript:void(0)">1</a>
+                            <a href="javascript:void(0)"> {currentPage} </a>
                           </li>
+
                           <li>
-                            <a href="javascript:void(0)">2</a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">3</a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">4</a>
-                          </li>
-                          <li>
-                            <a href="javascript:void(0)">5</a>
-                          </li>
-                          <li>
-                            <a className="Next" href="javascript:void(0)">
+                            <a
+                              onClick={() =>
+                                fetchProducts(
+                                  `/products?page=${currentPage + 1}`
+                                )
+                              }
+                            >
                               Next
                             </a>
                           </li>
