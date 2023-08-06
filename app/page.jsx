@@ -4,10 +4,10 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 import axiosClient from "@/utils/axios";
 import Image from "next/image";
 import Link from "next/link";
-
+export const revalidate = 0;
 const Home = async () => {
   const file_url = process.env.STORAGE_URL;
-  const response = await axiosClient.get(`/home`, { next: { revalidate: 1 } });
+  const response = await axiosClient.get(`/home`);
   const { banners, brands, featured_products, posts } = response.data;
   return (
     <>
