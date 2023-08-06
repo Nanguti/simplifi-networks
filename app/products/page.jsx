@@ -30,12 +30,12 @@ const Products = () => {
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
-            <h2>Ubiquiti Products</h2>
+            <h2>Products</h2>
             <ul>
               <li>
                 <a href="index.html">Home</a>
               </li>
-              <li className="active">Ubiquiti Products</li>
+              <li className="active">Products</li>
             </ul>
           </div>
         </div>
