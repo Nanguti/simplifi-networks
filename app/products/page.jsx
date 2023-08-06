@@ -5,7 +5,7 @@ import axiosClient from "@/utils/axios";
 import { useState, useEffect } from "react";
 export const revalidate = 0;
 const Products = () => {
-  const file_url = process.env.STORAGE_URL;
+  const file_url = "/storage";
   //const res = await axiosClient.get(`/products`);
   // const products = res.data.products;
 
