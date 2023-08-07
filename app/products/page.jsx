@@ -11,6 +11,8 @@ const Products = () => {
 
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [nextPageUrl, setNextPageUrl] = useState(null);
+  const [prevPageUrl, setPrevPageUrl] = useState(null);
 
   useEffect(() => {
     fetchProducts("/products?page=1");
@@ -21,6 +23,8 @@ const Products = () => {
       const response = await axiosClient.get(url);
       setProducts(response.data.products.data);
       setCurrentPage(response.data.products.current_page);
+      setNextPageUrl(response.data.products.next_page_url);
+      setPrevPageUrl(response.data.products.prev_page_url);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -135,7 +139,11 @@ const Products = () => {
               <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
                 {products.map((product) => (
                   <div className="col-lg-4" key={product.id}>
-                    <ProductCard product={product} type="normal" />
+                    <ProductCard
+                      product={product}
+                      file_url={file_url}
+                      type="normal"
+                    />
                   </div>
                 ))}
               </div>
