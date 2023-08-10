@@ -146,18 +146,18 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="javascript:void(0)">About Us</a>
+                            <a href="#">About Us</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">
+                            <a href="#">
                               Delivery Information
                             </a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Privacy Policy</a>
+                            <a href="#">Privacy Policy</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">
+                            <a href="#">
                               Terms &amp; Conditions
                             </a>
                           </li>
@@ -171,13 +171,13 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="javascript:void(0)">Contact Us</a>
+                            <a href="#">Contact Us</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Returns</a>
+                            <a href="#">Returns</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Site Map</a>
+                            <a href="#">Site Map</a>
                           </li>
                         </ul>
                       </div>
@@ -189,18 +189,18 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="javascript:void(0)">About Us</a>
+                            <a href="#">About Us</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">
+                            <a href="#">
                               Delivery Information
                             </a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Privacy Policy</a>
+                            <a href="#">Privacy Policy</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">
+                            <a href="#">
                               Terms &amp; Conditions
                             </a>
                           </li>
@@ -214,16 +214,16 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="javascript:void(0)">My Account</a>
+                            <a href="#">My Account</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Order History</a>
+                            <a href="#">Order History</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Wish List</a>
+                            <a href="#">Wish List</a>
                           </li>
                           <li>
-                            <a href="javascript:void(0)">Newsletter</a>
+                            <a href="#">Newsletter</a>
                           </li>
                         </ul>
                       </div>

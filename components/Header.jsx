@@ -487,7 +487,7 @@ const Header = () => {
               <nav className="offcanvas-navigation user-setting_area">
                 <ul className="mobile-menu">
                   <li className="menu-item-has-children active">
-                    <Link href="javascript:void(0)">
+                    <Link href="#">
                       <span className="mm-text">User Setting</span>
                     </Link>
                     <ul className="sub-menu">

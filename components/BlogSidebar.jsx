@@ -14,7 +14,7 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                     <div className="search-form_area">
                         <form
                             className="search-form"
-                            action="javascript:void(0)"
+                            action="#"
                         >
                             <input
                                 type="text"
@@ -31,7 +31,7 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                     <h4 className="uren-blog-sidebar-title">Archives</h4>
                     <ul className="uren-blog-archive">
                         <li>
-                            <a href="javascript:void(0)">September 2019</a>
+                            <a href="#">September 2019</a>
                         </li>
                     </ul>
                 </div>
@@ -136,19 +136,19 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                     <h4 className="uren-blog-sidebar-title">Tags</h4>
                     <ul className="uren-tags_list">
                         <li>
-                            <a href="javascript:void(0)">Sports</a>
+                            <a href="#">Sports</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Car</a>
+                            <a href="#">Car</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Vehicle</a>
+                            <a href="#">Vehicle</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Bike</a>
+                            <a href="#">Bike</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">Motorcycle</a>
+                            <a href="#">Motorcycle</a>
                         </li>
                     </ul>
                 </div>

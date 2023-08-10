@@ -43,7 +43,7 @@ const Brands = ({ brands, file_url }) => {
         <div className="slide-item" key={brand.id}>
           <div className="inner-slide">
             <div className="single-product">
-              <a href="javascript:void(0)">
+              <a href="#">
                 <img src={`${file_url}/${brand.photo}`} alt={brand.title} />
               </a>
             </div>

@@ -35,7 +35,7 @@ const ProductCard = ({ product, file_url, type }) => {
                       data-target="#exampleModalCenter"
                     >
                       <a
-                        href="javascript:void(0)"
+                        href="#"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Quick View"
@@ -103,7 +103,7 @@ const ProductCard = ({ product, file_url, type }) => {
                     data-target="#exampleModalCenter"
                   >
                     <a
-                      href="javascript:void(0)"
+                      href="#"
                       data-toggle="tooltip"
                       data-placement="top"
                       title="Quick View"
