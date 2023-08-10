@@ -44,34 +44,34 @@ const Blog = async () => {
                                             <div className="col-lg-12">
                                                 <ul className="uren-pagination-box carlet-color">
                                                     <li className="active">
-                                                        <a href="javascript:void(0)">
+                                                        <a href="#">
                                                             1
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a href="#">
                                                             2
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a href="#">
                                                             3
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a href="#">
                                                             4
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a href="#">
                                                             5
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a
                                                             className="Next"
-                                                            href="javascript:void(0)"
+                                                            href="#"
                                                         >
                                                             Next
                                                         </a>

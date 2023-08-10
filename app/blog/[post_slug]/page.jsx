@@ -56,7 +56,7 @@ const PostDetail = async ({ params }) => {
                 </div>
                 <div className="uren-tag-line">
                   <h4>Tag:</h4>
-                  <a href="javascript:void(0)">{tags}</a>,
+                  <a href="#)">{tags}</a>,
                 </div>
                 <div className="uren-social_link">
                   <ul>
@@ -111,7 +111,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                       <div className="comment-body">
                         <span className="reply-btn">
-                          <a href="javascript:void(0)">reply</a>
+                          <a href="#)">reply</a>
                         </span>
                         <h5 className="comment-author">Anny Adams</h5>
                         <div className="comment-post-date">
@@ -130,7 +130,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                       <div className="comment-body">
                         <span className="reply-btn">
-                          <a href="javascript:void(0)">reply</a>
+                          <a href="#)">reply</a>
                         </span>
                         <h5 className="comment-author">Edwin Adams</h5>
                         <div className="comment-post-date">
@@ -149,7 +149,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                       <div className="comment-body">
                         <span className="reply-btn">
-                          <a href="javascript:void(0)">reply</a>
+                          <a href="#)">reply</a>
                         </span>
                         <h5 className="comment-author">Anny Adams</h5>
                         <div className="comment-post-date">
@@ -166,7 +166,7 @@ const PostDetail = async ({ params }) => {
                     Your email address will not be published. Required fields
                     are marked *
                   </p>
-                  <form action="javascript:void(0)">
+                  <form action="#)">
                     <div className="comment-post-box">
                       <div className="row">
                         <div className="col-lg-12">
@@ -206,7 +206,7 @@ const PostDetail = async ({ params }) => {
                             <div className="uren-post-btn_area">
                               <a
                                 className="uren-btn-2"
-                                href="javascript:void(0)"
+                                href="#"
                               >
                                 Post comment
                               </a>

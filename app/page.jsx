@@ -79,7 +79,7 @@ const Home = async () => {
                     <Link href={`blog/${post.slug}`}>
                       <div class="inner-slide">
                         <div class="blog-img img-hover_effect">
-                          <a class="cursor-pointer" tabindex="0">
+                          <a class="cursor-pointer" tabIndex="0">
                             <img
                               src={`${file_url}/${post.photo}`}
                               alt={post.title}
@@ -91,7 +91,7 @@ const Home = async () => {
                         </div>
                         <div class="blog-content">
                           <h3>
-                            <a class="cursor-pointer" tabindex="0">
+                            <a class="cursor-pointer" tabIndex="0">
                               {post.title}
                             </a>
                           </h3>

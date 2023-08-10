@@ -167,7 +167,7 @@ const Products = () => {
                             </a>
                           </li>
                           <li className="active">
-                            <a href="javascript:void(0)"> {currentPage} </a>
+                            <a href="#"> {currentPage} </a>
                           </li>
 
                           <li>
