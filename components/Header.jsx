@@ -1,9 +1,12 @@
+import axiosClient from "@/utils/axios";
 import Newsletter from "./Newsletter";
 import Link from "next/link";
 // import { useEffect, useState } from "react"
 // import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
 
-const Header = () => {
+const Header = async () => {
+  const response = await axiosClient.get('/menu-items')
+  const {brands, catageories} = response.data
   return (
     <div>
       <Newsletter />
@@ -32,15 +35,10 @@ const Header = () => {
                           Support <i className="ion-ios-arrow-down" />
                         </Link>
                         <ul className="hm-dropdown">
-                          <li>
-                            <Link href="https://www.ui.com/">Ubiquiti</Link>
-                          </li>
-                          <li>
-                            <Link href="https://mikrotik.com/">MikroTik</Link>
-                          </li>
-                          <li>
-                            <Link href="https://www.siklu.com/">Siklu</Link>
-                          </li>
+                          {brands.map((brand)=><li key={brand.id}>
+                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
+                          </li>)}
+                         
                         </ul>
                       </li>
                       <li className="dropdown-holder">
