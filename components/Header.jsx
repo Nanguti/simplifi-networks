@@ -202,60 +202,27 @@ const Header = async () => {
                         <Link href="#">Browse by Manufacturer</Link>
                         <ul className="cat-mega-menu">
                           <li className="right-menu cat-mega-title">
-                            {/* <Link href="#">Active body control</Link> */}
+                            {/* <Link href="#">Sub header</Link> */}
                             <ul>
-                              <li>
-                                <Link href="/products">Ubiquiti</Link>
-                              </li>
-                              <li>
-                                <Link href="#">MikroTik</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Sopto</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Grandway</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Ruijie</Link>
-                              </li>
+                              {brands.slice(0, 5).map((brand)=><li>
+                                <Link href="/products">{brand.title}</Link>
+                              </li>)}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
-                            {/* <Link href="#">Battery Indicator</Link> */}
+                            {/* <Link href="#">sub header</Link> */}
                             <ul>
-                              <li>
-                                <Link href="#">Siklu</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Netstar</Link>
-                              </li>
-                              <li>
-                                <Link href="#">D-Line</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Tycon Systems</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Simplifi Networks</Link>
-                              </li>
+                              {brands.slice(5, 10).map((brand)=><li>
+                                <Link href="/products">{brand.title}</Link>
+                              </li>)}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
-                            {/* <Link href="#">Remote Starter</Link> */}
+                            {/* <Link href="#">sub header</Link> */}
                             <ul>
-                              <li>
-                                <Link href="#">RF Elements</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Signal Fire</Link>
-                              </li>
-                              <li>
-                                <Link href="#">Teltonika</Link>
-                              </li>
-                              <li>
-                                <Link href="#">ONV</Link>
-                              </li>
+                              {brands.slice(10, 15).map((brand)=><li>
+                                <Link href="/products">{brand.title}</Link>
+                              </li>)}
                             </ul>
                           </li>
                         </ul>
