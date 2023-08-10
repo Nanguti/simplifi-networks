@@ -22,8 +22,8 @@ const Banners = ({ banners, file_url }) => {
                 >
                     <div className="slider-content">
                         <span>Ubiquiti U6-Pro Unifi 6-Pro Access</span>
-                        <h3>Point</h3>
-                        <h4>High client capacity</h4>
+                        <h3 className="banner-text">Point</h3>
+                        <h4 className="banner-text">High client capacity</h4>
                         <div className="uren-btn-ps_left slide-btn">
                             <a className="uren-btn" href="#">
                                 Read More

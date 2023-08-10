@@ -319,4 +319,8 @@ element.style {
   font-weight: 700;
   color: #fff;
 }
+
+.banner-text{
+  text-align: left;
+}
   
