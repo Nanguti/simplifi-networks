@@ -1,12 +1,33 @@
+'use client'
 import axiosClient from "@/utils/axios";
 import Newsletter from "./Newsletter";
 import Link from "next/link";
-// import { useEffect, useState } from "react"
-// import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-const Header = async () => {
-  const response = await axiosClient.get('/menu-items')
-  const {brands, catageories} = response.data
+const Header = () => {
+  // const response = await axiosClient.get('/menu-items')
+  // const {brands, catageories} = response.data
+  const router = useRouter()
+  const [brands, setBrands] = useState([])
+  useEffect(() => {
+    fetchMenuItems("/menu-items");
+  }, []);
+
+  const fetchMenuItems = async (url) => {
+    try {
+      const response = await axiosClient.get(url);
+      setBrands(response.data.brands);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+
+
+  const handleProductsCategory = (slug)=>{
+    router.push(`category/${slug}`);
+  }
   return (
     <div>
       <Newsletter />
@@ -102,15 +123,9 @@ const Header = async () => {
                           Support <i className="ion-ios-arrow-down" />
                         </Link>
                         <ul className="hm-dropdown">
-                          <li>
-                            <Link href="https://www.ui.com/">Ubiquiti</Link>
-                          </li>
-                          <li>
-                            <Link href="https://mikrotik.com/">MikroTik</Link>
-                          </li>
-                          <li>
-                            <Link href="https://www.siklu.com/">Siklu</Link>
-                          </li>
+                        {brands.map((brand)=><li key={brand.id}>
+                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
+                          </li>)}
                         </ul>
                       </li>
                       <li className="dropdown-holder">
@@ -202,7 +217,6 @@ const Header = async () => {
                         <Link href="#">Browse by Manufacturer</Link>
                         <ul className="cat-mega-menu">
                           <li className="right-menu cat-mega-title">
-                            {/* <Link href="#">Sub header</Link> */}
                             <ul>
                               {brands.slice(0, 5).map((brand)=><li>
                                 <Link href="/products">{brand.title}</Link>
@@ -210,7 +224,6 @@ const Header = async () => {
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
-                            {/* <Link href="#">sub header</Link> */}
                             <ul>
                               {brands.slice(5, 10).map((brand)=><li>
                                 <Link href="/products">{brand.title}</Link>
@@ -218,7 +231,6 @@ const Header = async () => {
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
-                            {/* <Link href="#">sub header</Link> */}
                             <ul>
                               {brands.slice(10, 15).map((brand)=><li>
                                 <Link href="/products">{brand.title}</Link>
@@ -228,14 +240,14 @@ const Header = async () => {
                         </ul>
                       </li>
                       <li className="right-menu">
-                        <Link href="wireless-access-points.html">
+                        <a onClick ={()=>handleProductsCategory('wireless-access-points')}>
                           Wireless Access Points
-                        </Link>
+                        </a>
                         <ul className="cat-dropdown cat-dropdown-2">
                           <li>
-                            <Link href="indoor-access-points-wifi-4.html">
+                            <a onClick={()=>handleProductsCategory('wireless-access-points')}>
                               Indoor Access Points
-                            </Link>
+                            </a>
                             <Link href="wireless-access-points.html">
                               Outdoor Access Points
                             </Link>
@@ -441,7 +453,7 @@ const Header = async () => {
                     </Link>
                     <ul className="sub-menu">
                       <li>
-                        <Link href="">
+                        <Link href="signup">
                           <span className="mm-text">My Account</span>
                         </Link>
                       </li>
@@ -457,12 +469,12 @@ const Header = async () => {
                     </Link>
                     <ul className="sub-menu">
                       <li>
-                        <Link href="my-account.html">
+                        <Link href="login">
                           <span className="mm-text">My Account</span>
                         </Link>
                       </li>
                       <li>
-                        <Link href="login-register.html">
+                        <Link href="signup">
                           <span className="mm-text">Login | Register</span>
                         </Link>
                       </li>
