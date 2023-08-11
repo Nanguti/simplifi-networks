@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const BlogSidebar = ({ recent_posts, file_url }) => {
@@ -31,7 +32,7 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                     <h4 className="uren-blog-sidebar-title">Archives</h4>
                     <ul className="uren-blog-archive">
                         <li>
-                            <a href="#">September 2019</a>
+                            <Link href="#">September 2019</Link>
                         </li>
                     </ul>
                 </div>
@@ -81,9 +82,9 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                         </div>
                         <div className="user-info">
                             <span>HasTech say:</span>
-                            <a href="javascipt:void(0)">
+                            <Link href="">
                                 Nulla auctor mi vel nisl...
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="recent-comment">
@@ -96,9 +97,9 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                         </div>
                         <div className="user-info">
                             <span>Kathy Young say:</span>
-                            <a href="javascipt:void(0)">
+                            <Link href="">
                                 Mauris Venenatis Orci Quis...
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="recent-comment">
@@ -111,9 +112,9 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                         </div>
                         <div className="user-info">
                             <span>HasTech say:</span>
-                            <a href="javascipt:void(0)">
+                            <Link href="">
                                 Quisque Semper Nunc Vitae...
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="recent-comment">
@@ -126,9 +127,9 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                         </div>
                         <div className="user-info">
                             <span>Kathy Young say:</span>
-                            <a href="javascipt:void(0)">
+                            <Link href="#">
                                 Thanks for the information, anyway :)
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -136,19 +137,19 @@ const BlogSidebar = ({ recent_posts, file_url }) => {
                     <h4 className="uren-blog-sidebar-title">Tags</h4>
                     <ul className="uren-tags_list">
                         <li>
-                            <a href="#">Sports</a>
+                            <Link href="#">Sports</Link>
                         </li>
                         <li>
-                            <a href="#">Car</a>
+                            <Link href="#">Car</Link>
                         </li>
                         <li>
-                            <a href="#">Vehicle</a>
+                            <Link href="#">Vehicle</Link>
                         </li>
                         <li>
-                            <a href="#">Bike</a>
+                            <Link href="#">Bike</Link>
                         </li>
                         <li>
-                            <a href="#">Motorcycle</a>
+                            <Link href="#">Motorcycle</Link>
                         </li>
                     </ul>
                 </div>

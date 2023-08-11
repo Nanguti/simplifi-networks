@@ -38,9 +38,9 @@ const Home = async () => {
       </div>
       {/* Begin Featured Categories Area */}
 
-      {/* <div class="gradient-background">
-        <div class="slider-text-container">
-          <div class="slider-text">Your sliding text here!</div>
+      {/* <div className="gradient-background">
+        <div className="slider-text-container">
+          <div className="slider-text">Your sliding text here!</div>
         </div>
       </div> */}
 
@@ -75,23 +75,23 @@ const Home = async () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {posts.map((post) => (
-                  <div class="slide-item" key={post.id}>
+                  <div className="slide-item" key={post.id}>
                     <Link href={`blog/${post.slug}`}>
-                      <div class="inner-slide">
-                        <div class="blog-img img-hover_effect">
-                          <a class="cursor-pointer" tabIndex="0">
+                      <div className="inner-slide">
+                        <div className="blog-img img-hover_effect">
+                          <a className="cursor-pointer" tabIndex="0">
                             <img
                               src={`${file_url}/${post.photo}`}
                               alt={post.title}
                             />
                           </a>
-                          <span class="post-date">
+                          <span className="post-date">
                             {post.created_at.substring(0, 10)}
                           </span>
                         </div>
-                        <div class="blog-content">
+                        <div className="blog-content">
                           <h3>
-                            <a class="cursor-pointer" tabIndex="0">
+                            <a className="cursor-pointer" tabIndex="0">
                               {post.title}
                             </a>
                           </h3>

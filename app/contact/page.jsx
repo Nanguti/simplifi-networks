@@ -9,7 +9,7 @@ const Contact = () => {
                         <h2>Other</h2>
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <Link href="/">Home</Link>
                             </li>
                             <li className="active">Contact</li>
                         </ul>

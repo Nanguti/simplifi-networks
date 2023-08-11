@@ -3,6 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import Sidebar from "@/components/Sidebar";
 import axiosClient from "@/utils/axios";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 export const revalidate = 0;
 const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
@@ -37,7 +38,7 @@ const Products = () => {
             <h2>Products</h2>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li className="active">Products</li>
             </ul>

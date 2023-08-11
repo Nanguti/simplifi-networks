@@ -3,6 +3,7 @@ import RelatedProducts from "@/components/RelatedProduct";
 import axiosClient from "@/utils/axios";
 import ProductComponent from "@/components/ProductComponent";
 import parse from "html-react-parser";
+import Link from "next/link";
 
 const ProductDetail = async ({ params }) => {
   const slug = params.product_slug;
@@ -21,7 +22,7 @@ const ProductDetail = async ({ params }) => {
             <h2>{title}</h2>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <Link href="index.html">Home</Link>
               </li>
               <li className="active">{title}</li>
             </ul>
@@ -59,7 +60,7 @@ const ProductDetail = async ({ params }) => {
                   <div className="sp-content">
                     <div className="sp-heading">
                       <h5>
-                        <a href="#">{title}</a>
+                        <Link href="#">{title}</Link>
                       </h5>
                     </div>
                     <div className="sp-essential_stuff">
@@ -71,24 +72,24 @@ const ProductDetail = async ({ params }) => {
                     <div className="uren-social_link">
                       <ul>
                         <li className="facebook">
-                          <a
+                          <Link
                             href="https://www.facebook.com/"
                             data-toggle="tooltip"
                             target="_blank"
                             title="Facebook"
                           >
                             <i className="fab fa-facebook" />
-                          </a>
+                          </Link>
                         </li>
                         <li className="twitter">
-                          <a
+                          <Link
                             href="https://twitter.com/"
                             data-toggle="tooltip"
                             target="_blank"
                             title="Twitter"
                           >
                             <i className="fab fa-twitter-square" />
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

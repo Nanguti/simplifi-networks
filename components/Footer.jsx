@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -53,12 +54,12 @@ const Footer = () => {
               <div className="col-lg-4">
                 <div className="footer-widgets_info">
                   <div className="footer-widgets_logo">
-                    <a href="#">
+                    <Link href="#">
                       <img
                         src="/assets/images/menu/logo/1.png"
                         alt="Simplifi Networks Footer Logo"
                       />
-                    </a>
+                    </Link>
                   </div>
                   <div className="widget-short_desc">
                     <p>
@@ -80,57 +81,57 @@ const Footer = () => {
                       </li>
                       <li className="uren-phone">
                         <span>Call Us:</span>{" "}
-                        <a href="tel://+123123321345">+123 321 345</a>
+                        <Link href="tel://+123123321345">+123 321 345</Link>
                       </li>
                       <li className="uren-email">
                         <span>Email:</span>{" "}
-                        <a href="mailto://info@yourdomain.com">
+                        <Link href="mailto://info@yourdomain.com">
                           info@yourdomain.com
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
                   <div className="uren-social_link">
                     <ul>
                       <li className="facebook">
-                        <a
+                        <Link
                           href="https://www.facebook.com/"
                           data-toggle="tooltip"
                           target="_blank"
                           title="Facebook"
                         >
                           <i className="fab fa-facebook" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="twitter">
-                        <a
+                        <Link
                           href="https://twitter.com/"
                           data-toggle="tooltip"
                           target="_blank"
                           title="Twitter"
                         >
                           <i className="fab fa-twitter-square" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="google-plus">
-                        <a
+                        <Link
                           href="https://www.plus.google.com/discover"
                           data-toggle="tooltip"
                           target="_blank"
                           title="Google Plus"
                         >
                           <i className="fab fa-google-plus" />
-                        </a>
+                        </Link>
                       </li>
                       <li className="instagram">
-                        <a
+                        <Link
                           href="https://rss.com/"
                           data-toggle="tooltip"
                           target="_blank"
                           title="Instagram"
                         >
                           <i className="fab fa-instagram" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -146,20 +147,20 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="#">About Us</a>
+                            <Link href="#">About Us</Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link href="#">
                               Delivery Information
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#">Privacy Policy</a>
+                            <Link href="#">Privacy Policy</Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link href="#">
                               Terms &amp; Conditions
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -171,13 +172,13 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="#">Contact Us</a>
+                            <Link href="#">Contact Us</Link>
                           </li>
                           <li>
-                            <a href="#">Returns</a>
+                            <Link href="#">Returns</Link>
                           </li>
                           <li>
-                            <a href="#">Site Map</a>
+                            <Link href="#">Site Map</Link>
                           </li>
                         </ul>
                       </div>
@@ -189,20 +190,20 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="#">About Us</a>
+                            <Link href="#">About Us</Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link href="#">
                               Delivery Information
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="#">Privacy Policy</a>
+                            <Link href="#">Privacy Policy</Link>
                           </li>
                           <li>
-                            <a href="#">
+                            <Link href="#">
                               Terms &amp; Conditions
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -214,16 +215,16 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <a href="#">My Account</a>
+                            <Link href="#">My Account</Link>
                           </li>
                           <li>
-                            <a href="#">Order History</a>
+                            <Link href="#">Order History</Link>
                           </li>
                           <li>
-                            <a href="#">Wish List</a>
+                            <Link href="#">Wish List</Link>
                           </li>
                           <li>
-                            <a href="#">Newsletter</a>
+                            <Link href="#">Newsletter</Link>
                           </li>
                         </ul>
                       </div>
@@ -241,18 +242,18 @@ const Footer = () => {
                 <div className="col-lg-6 col-md-6">
                   <div className="copyright">
                     <span>
-                      <a href="Simplifinetworks.net">Simplifinetworks</a>
+                      <Link href="Simplifinetworks.net">Simplifinetworks</Link>
                     </span>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="payment">
-                    <a href="#">
+                    <Link href="#">
                       <img
                         src="assets/images/footer/payment/1.png"
                         alt="Simplifi Networks Payment Method"
                       />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -384,7 +385,7 @@ const Footer = () => {
                   <div className="sp-content">
                     <div className="sp-heading">
                       <h5>
-                        <a href="#">NanoBeam AC</a>
+                        <Link href="#">NanoBeam AC</Link>
                       </h5>
                     </div>
                     <div className="sp-essential_stuff">
@@ -401,24 +402,24 @@ const Footer = () => {
                     <div className="uren-social_link">
                       <ul>
                         <li className="facebook">
-                          <a
+                          <Link
                             href="https://www.facebook.com/"
                             data-toggle="tooltip"
                             target="_blank"
                             title="Facebook"
                           >
                             <i className="fab fa-facebook" />
-                          </a>
+                          </Link>
                         </li>
                         <li className="twitter">
-                          <a
+                          <Link
                             href="https://twitter.com/"
                             data-toggle="tooltip"
                             target="_blank"
                             title="Twitter"
                           >
                             <i className="fab fa-twitter-square" />
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

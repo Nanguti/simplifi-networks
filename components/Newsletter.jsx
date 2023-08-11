@@ -12,8 +12,6 @@ const Newsletter = () => {
     }, []);
 
     const donotShowAgain = (event) => {
-        // setShowPopup(false);
-        // localStorage.setItem("popupCanceled", true);
         const canceled = event.target.checked;
         setShowPopup(!canceled);
         localStorage.setItem("popupCanceled", canceled ? "true" : "");

@@ -1,5 +1,6 @@
 import BlogSidebar from "@/components/BlogSidebar";
 import axiosClient from "@/utils/axios";
+import Link from "next/link";
 
 const PostDetail = async ({ params }) => {
   const slug = params.post_slug;
@@ -17,7 +18,7 @@ const PostDetail = async ({ params }) => {
             <h2>Blog Details</h2>
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li className="active">{title}</li>
             </ul>
@@ -33,16 +34,16 @@ const PostDetail = async ({ params }) => {
             <div className="col-lg-9 order-1">
               <div className="blog-item">
                 <div className="blog-img img-hover_effect">
-                  <a href="blog-details-left-sidebar.html">
+                  <Link href="blog-details-left-sidebar.html">
                     <img src={`${file_url}/${photo}`} alt="Uren's Blog Image" />
-                  </a>
+                  </Link>
                   <span className="post-date">
                     {created_at.substring(0, 10)}
                   </span>
                 </div>
                 <div className="blog-content">
                   <h3>
-                    <a href="blog-details-left-sidebar.html">{title}</a>
+                    <Link href="blog-details-left-sidebar.html">{title}</Link>
                   </h3>
                   <p>{summary}</p>
                 </div>
@@ -56,49 +57,49 @@ const PostDetail = async ({ params }) => {
                 </div>
                 <div className="uren-tag-line">
                   <h4>Tag:</h4>
-                  <a href="#)">{tags}</a>,
+                  <Link href="#)">{tags}</Link>,
                 </div>
                 <div className="uren-social_link">
                   <ul>
                     <li className="facebook">
-                      <a
+                      <Link
                         href="https://www.facebook.com/"
                         data-toggle="tooltip"
                         target="_blank"
                         title="Facebook"
                       >
                         <i className="fab fa-facebook" />
-                      </a>
+                      </Link>
                     </li>
                     <li className="twitter">
-                      <a
+                      <Link
                         href="https://twitter.com/"
                         data-toggle="tooltip"
                         target="_blank"
                         title="Twitter"
                       >
                         <i className="fab fa-twitter-square" />
-                      </a>
+                      </Link>
                     </li>
                     <li className="google-plus">
-                      <a
+                      <Link
                         href="https://www.plus.google.com/discover"
                         data-toggle="tooltip"
                         target="_blank"
                         title="Google Plus"
                       >
                         <i className="fab fa-google-plus" />
-                      </a>
+                      </Link>
                     </li>
                     <li className="instagram">
-                      <a
+                      <Link
                         href="https://rss.com/"
                         data-toggle="tooltip"
                         target="_blank"
                         title="Instagram"
                       >
                         <i className="fab fa-instagram" />
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -111,7 +112,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                       <div className="comment-body">
                         <span className="reply-btn">
-                          <a href="#)">reply</a>
+                          <Link href="#)">reply</Link>
                         </span>
                         <h5 className="comment-author">Anny Adams</h5>
                         <div className="comment-post-date">
@@ -130,7 +131,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                       <div className="comment-body">
                         <span className="reply-btn">
-                          <a href="#)">reply</a>
+                          <Link href="#)">reply</Link>
                         </span>
                         <h5 className="comment-author">Edwin Adams</h5>
                         <div className="comment-post-date">
@@ -149,7 +150,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                       <div className="comment-body">
                         <span className="reply-btn">
-                          <a href="#)">reply</a>
+                          <Link href="#)">reply</Link>
                         </span>
                         <h5 className="comment-author">Anny Adams</h5>
                         <div className="comment-post-date">
@@ -204,12 +205,12 @@ const PostDetail = async ({ params }) => {
                         <div className="col-lg-12">
                           <div className="comment-btn_wrap f-left">
                             <div className="uren-post-btn_area">
-                              <a
+                              <Link
                                 className="uren-btn-2"
                                 href="#"
                               >
                                 Post comment
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </div>

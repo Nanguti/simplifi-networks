@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Sidebar = () => {
     return (
         <>
@@ -9,19 +10,19 @@ const Sidebar = () => {
                     <div className="module-body">
                         <ul className="module-list_item">
                             <li>
-                                <a href="">Consoles </a>
-                                <a href="indoor-access-points-wifi-5.html">
+                                <Link href="">Consoles </Link>
+                                <Link href="indoor-access-points-wifi-5.html">
                                     WiFi{" "}
-                                </a>
-                                <a href="javascript:void(0)">
+                                </Link>
+                                <Link href="#">
                                     Routing &amp; Switching{" "}
-                                </a>
-                                <a href="protect.html">Protect </a>
-                                <a href="javascript:void(0)">UISP </a>
-                                <a href="javascript:void(0)">LTU </a>
-                                <a href="javascript:void(0)">Accessories </a>
-                                <a href="javascript:void(0)">Routers </a>
-                                <a href="javascript:void(0)">Switches </a>
+                                </Link>
+                                <Link href="protect.html">Protect </Link>
+                                <Link href="#">UISP </Link>
+                                <Link href="#">LTU </Link>
+                                <Link href="#">Accessories </Link>
+                                <Link href="#">Routers </Link>
+                                <Link href="#">Switches </Link>
                             </li>
                         </ul>
                     </div>
@@ -32,29 +33,29 @@ const Sidebar = () => {
                     </div>
                     <ul className="sidebar-checkbox_list">
                         <li>
-                            <a href="javascript:void(0)">
+                            <Link href="#">
                                 Ubiquiti <span>(10)</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <Link href="#">
                                 MikroTik <span>(2)</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <Link href="#">
                                 Ruijie <span>(1)</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <Link href="#">
                                 Siklu <span>(3)</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">
+                            <Link href="#">
                                 Grandway <span>(0)</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>

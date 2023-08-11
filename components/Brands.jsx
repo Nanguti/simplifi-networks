@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const Brands = ({ brands, file_url }) => {
   const sliderRef = useRef(null);
@@ -43,9 +44,9 @@ const Brands = ({ brands, file_url }) => {
         <div className="slide-item" key={brand.id}>
           <div className="inner-slide">
             <div className="single-product">
-              <a href="#">
+              <Link href="#">
                 <img src={`${file_url}/${brand.photo}`} alt={brand.title} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

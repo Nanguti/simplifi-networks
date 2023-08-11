@@ -70,7 +70,7 @@ const FeaturedProducts = ({ products, file_url }) => {
                   {parse(product.title)}
                 </a>
               </h3>
-              <p>{parse(product.summary)}</p>
+              {parse(product.summary)}
               <div className="uren-btn-ps_left">
                 <a
                   className="uren-btn cursor-pointer"

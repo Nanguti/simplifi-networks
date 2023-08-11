@@ -24,7 +24,7 @@ const About = () => {
           <div className="row">
             <div className="col-lg-6 col-md-5">
               <div className="overview-img text-center img-hover_effect">
-                <a href="#">
+                <Link href="#">
                   <img
                     className="img-full"
                     src="assets/images/about-us/1.jpg"
@@ -32,7 +32,7 @@ const About = () => {
                     layout="fill"
                     alt="Simplifi Networks' About Us Image"
                   />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-7 d-flex align-items-center">
@@ -125,12 +125,12 @@ const About = () => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="team-member">
                 <div className="team-thumb img-hover_effect">
-                  <a href="#">
+                  <Link href="#">
                     <img
                       src="assets/images/about-us/team/1.png"
                       alt="Our Team Member"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="team-content text-center">
                   <h3>Ken Stober</h3>
@@ -142,12 +142,12 @@ const About = () => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="team-member">
                 <div className="team-thumb img-hover_effect">
-                  <a href="#">
+                  <Link href="#">
                     <img
                       src="assets/images/about-us/team/2.png"
                       alt="Our Team Member"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="team-content text-center">
                   <h3>Graham Balcombe</h3>
@@ -159,12 +159,12 @@ const About = () => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="team-member">
                 <div className="team-thumb img-hover_effect">
-                  <a href="#">
+                  <Link href="#">
                     <img
                       src="assets/images/about-us/team/3.png"
                       alt="Our Team Member"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="team-content text-center">
                   <h3>Regina Kaaria</h3>
@@ -176,12 +176,12 @@ const About = () => {
             <div className="col-lg-3 col-md-6 col-sm-6">
               <div className="team-member">
                 <div className="team-thumb img-hover_effect">
-                  <a href="#">
+                  <Link href="#">
                     <img
                       src="assets/images/about-us/team/4.jpeg"
                       alt="Our Team Member"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="team-content text-center">
                   <h3>Ambrose Ahurra</h3>

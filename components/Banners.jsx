@@ -1,6 +1,7 @@
 "use client";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Link from "next/link";
 
 const Banners = ({ banners, file_url }) => {
     return (
@@ -25,9 +26,9 @@ const Banners = ({ banners, file_url }) => {
                         <h3 className="banner-text">Point</h3>
                         <h4 className="banner-text">High client capacity</h4>
                         <div className="uren-btn-ps_left slide-btn">
-                            <a className="uren-btn" href="#">
+                            <Link className="uren-btn" href="#">
                                 Read More
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

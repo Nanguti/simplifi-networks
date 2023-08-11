@@ -44,37 +44,37 @@ const Blog = async () => {
                                             <div className="col-lg-12">
                                                 <ul className="uren-pagination-box carlet-color">
                                                     <li className="active">
-                                                        <a href="#">
+                                                        <Link href="#">
                                                             1
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <Link href="#">
                                                             2
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <Link href="#">
                                                             3
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <Link href="#">
                                                             4
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <Link href="#">
                                                             5
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a
+                                                        <Link
                                                             className="Next"
                                                             href="#"
                                                         >
                                                             Next
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
