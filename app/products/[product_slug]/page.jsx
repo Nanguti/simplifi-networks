@@ -13,7 +13,6 @@ const ProductDetail = async ({ params }) => {
     res.data.product_detail;
   const related_products = res.data.product_detail.rel_prods;
   const brands = res.data.brands;
-
   return (
     <>
       <div className="breadcrumb-area">

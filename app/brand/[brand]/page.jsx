@@ -4,11 +4,10 @@ import axiosClient from "@/utils/axios"
 import Link from "next/link";
 
 const ProductsByBrand = async({params}) => {
-    const slug = params.category;
+    const slug = params.brand;
     const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
     const response = await axiosClient.post('/brand/products', {slug})
-    const brand = response.data.results
-    console.log('response '+ response)
+    const products = response.data.results.data
     return (
         <>
           <div className="breadcrumb-area">
@@ -19,7 +18,7 @@ const ProductsByBrand = async({params}) => {
                   <li>
                     <Link href="/">Home</Link>
                   </li>
-                  <li className="active">{brand.title}</li>
+                  <li className="active"></li>
                 </ul>
               </div>
             </div>
@@ -117,7 +116,7 @@ const ProductsByBrand = async({params}) => {
                     </div>
                   </div>
                   <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
-                    {brand.products.map((product) => (
+                    {products.map((product) => (
                       <div className="col-lg-4" key={product.id}>
                         <ProductCard
                           product={product}
