@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const Brands = ({ brands, file_url }) => {

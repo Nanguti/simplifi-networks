@@ -1,5 +1,27 @@
+'use client'
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import axiosClient from "@/utils/axios";
 const Sidebar = () => {
+    const router = useRouter()
+  const [brands, setBrands] = useState([])
+  useEffect(() => {
+    fetchMenuItems("/menu-items");
+  }, []);
+
+  const fetchMenuItems = async (url) => {
+    try {
+      const response = await axiosClient.get(url);
+      setBrands(response.data.brands);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const handleProductsByBrand = (slug)=>{
+    router.push(`/brand/${slug}`);
+  }
     return (
         <>
             <div className="uren-sidebar-catagories_area">
@@ -32,31 +54,15 @@ const Sidebar = () => {
                         <h5>Top Manufacturers</h5>
                     </div>
                     <ul className="sidebar-checkbox_list">
+                        {brands.map((brand)=>
                         <li>
-                            <Link href="#">
-                                Ubiquiti <span>(10)</span>
-                            </Link>
+                            <a className="cursor-pointer" onClick={()=> handleProductsByBrand(brand.slug) } >
+                                {brand.title} <span>(10)</span>
+                            </a>
                         </li>
-                        <li>
-                            <Link href="#">
-                                MikroTik <span>(2)</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#">
-                                Ruijie <span>(1)</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#">
-                                Siklu <span>(3)</span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="#">
-                                Grandway <span>(0)</span>
-                            </Link>
-                        </li>
+                        )}
+                        
+                        
                     </ul>
                 </div>
             </div>

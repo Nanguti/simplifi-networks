@@ -28,6 +28,10 @@ const Header = () => {
   const handleProductsCategory = (slug)=>{
     router.push(`category/${slug}`);
   }
+
+  const handleProductsByBrand = (slug) => {
+    router.push(`brand/${slug}`)
+  }
   return (
     <div>
       <Newsletter />
@@ -219,21 +223,21 @@ const Header = () => {
                           <li className="right-menu cat-mega-title">
                             <ul>
                               {brands.slice(0, 5).map((brand)=><li>
-                                <Link href="/products">{brand.title}</Link>
+                                <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)} >{brand.title}</a>
                               </li>)}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
                               {brands.slice(5, 10).map((brand)=><li>
-                                <Link href="/products">{brand.title}</Link>
+                                <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)}>{brand.title}</a>
                               </li>)}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
                               {brands.slice(10, 15).map((brand)=><li>
-                                <Link href="/products">{brand.title}</Link>
+                                <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)}>{brand.title}</a>
                               </li>)}
                             </ul>
                           </li>
