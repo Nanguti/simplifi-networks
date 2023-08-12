@@ -38,12 +38,6 @@ const Home = async () => {
       </div>
       {/* Begin Featured Categories Area */}
 
-      {/* <div className="gradient-background">
-        <div className="slider-text-container">
-          <div className="slider-text">Your sliding text here!</div>
-        </div>
-      </div> */}
-
       <div className="featured-categories_area">
         <div className="container-fluid ">
           <div className="section-title_area">

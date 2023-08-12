@@ -2,9 +2,11 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Brands = ({ brands, file_url }) => {
   const sliderRef = useRef(null);
+  const router = useRouter()
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,6 +18,9 @@ const Brands = ({ brands, file_url }) => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleProductsByBrand = (slug) => {
+    router.push(`/brand/${slug}`);
+  }
   const settings = {
     dots: false,
     infinite: true,
@@ -44,9 +49,9 @@ const Brands = ({ brands, file_url }) => {
         <div className="slide-item" key={brand.id}>
           <div className="inner-slide">
             <div className="single-product">
-              <Link href="#">
+              <a onClick={()=>handleProductsByBrand(brand.slug)}>
                 <img src={`${file_url}/${brand.photo}`} alt={brand.title} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
