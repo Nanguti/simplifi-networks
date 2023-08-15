@@ -520,7 +520,7 @@ button {
 }
 
 .uren-paginatoin-area .uren-pagination-box.carlet-color {
-  border: 2px solid #e52e06;
+  border: 2px solid #f16334;
 }
 
 .uren-paginatoin-area .uren-pagination-box.carlet-color > li:last-child > a {
@@ -528,15 +528,15 @@ button {
 }
 
 .uren-paginatoin-area .uren-pagination-box.carlet-color > li.active > a {
-  color: #e52e06;
+  color: #f16334;
 }
 
 .uren-paginatoin-area .uren-pagination-box.carlet-color > li > a {
-  border-right: 1px solid #e52e06;
+  border-right: 1px solid #f16334;
 }
 
 .uren-paginatoin-area .uren-pagination-box.carlet-color > li > a:hover {
-  color: #e52e06 !important;
+  color: #f16334 !important;
 }
 
 .uren-paginatoin-area .uren-pagination-box.primary-color {
@@ -561,7 +561,7 @@ button {
 
 /* ---Uren's ScrollUp--- */
 #scrollUp {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff !important;
   text-transform: uppercase;
   right: 15px;
@@ -1092,7 +1092,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .popup_wrapper .subscribe_area .subscribe-form-group form.subscribe-form button:hover {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff !important;
 }
 
@@ -1163,7 +1163,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .carlet-text_color {
-  color: #e52e06 !important;
+  color: #f16334 !important;
 }
 
 /* ---Activation Color--- */
@@ -1173,7 +1173,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-main_area-3 .main-nav > ul > li.active > a {
-  color: #e52e06 !important;
+  color: #f16334 !important;
 }
 
 /*----------------------------------------*/
@@ -1270,7 +1270,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 .uren-filter_btn:hover,
 .uren-btn_dark:hover,
 .uren-btn_limerick:hover {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff !important;
 }
 
@@ -1283,7 +1283,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 .uren-filter_btn.uren-btn-2,
 .uren-btn_dark.uren-btn-2,
 .uren-btn_limerick.uren-btn-2 {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff !important;
 }
 
@@ -1529,7 +1529,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .uren-slider_area.uren-slider_area-3 .main-slider .slider-content > h3:before {
-  background-color: #e52e06;
+  background-color: #f16334;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -2950,7 +2950,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 
 .uren-banner_area-3 .banner-item .banner-content span.contact-info {
   font-weight: 700;
-  color: #e52e06;
+  color: #f16334;
   font-size: 24px;
 }
 
@@ -3044,7 +3044,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .uren-banner_area-3 .banner-item .banner-content > a.read-more:hover {
-  color: #e52e06 !important;
+  color: #f16334 !important;
 }
 
 /*----------------------------------------*/
@@ -3167,7 +3167,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .product-slide_item .inner-slide .single-product .product-content .product-desc_info .price-box .new-price.new-price-2 {
-  color: #e52e06;
+  color: #f16334;
   font-weight: 700;
 }
 
@@ -3298,7 +3298,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 
 .special-product_slider .slide-item .inner-slide .single-product .product-content .product-desc_info .uren-countdown_area span.product-offer,
 .special-product_slider-2 .slide-item .inner-slide .single-product .product-content .product-desc_info .uren-countdown_area span.product-offer {
-  color: #e52e06;
+  color: #f16334;
   padding-bottom: 10px;
   display: block;
 }
@@ -3347,7 +3347,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 
 .special-product_slider .slide-item .inner-slide .single-product .product-content .product-desc_info .price-box .new-price.new-price-2,
 .special-product_slider-2 .slide-item .inner-slide .single-product .product-content .product-desc_info .price-box .new-price.new-price-2 {
-  color: #e52e06;
+  color: #f16334;
   font-weight: 700;
 }
 
@@ -3435,9 +3435,9 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 
 .special-product_slider .slide-item .inner-slide .single-product .product-content .product-desc_info .add-actions ul > li > a.uren-add_cart:hover,
 .special-product_slider-2 .slide-item .inner-slide .single-product .product-content .product-desc_info .add-actions ul > li > a.uren-add_cart:hover {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff !important;
-  border-color: #e52e06;
+  border-color: #f16334;
 }
 
 .special-product_slider .slide-item .inner-slide .single-product .product-content .product-desc_info .add-actions ul > li > a.uren-add_cart > i,
@@ -3623,7 +3623,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .list-product_slider .slide-item .inner-slide .single-product .product-content > .price-box .new-price.new-price-2 {
-  color: #e52e06;
+  color: #f16334;
   font-weight: 700;
 }
 
@@ -3925,7 +3925,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .newsletter-form_wrap .subscribe-form .newsletter-btn:hover {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff;
 }
 
@@ -4252,7 +4252,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .modal-wrapper .modal-dialog .modal-content .modal-body .modal-inner-area .sp-content .price-box .new-price.new-price-2 {
-  color: #e52e06;
+  color: #f16334;
   font-weight: 700;
 }
 
@@ -4584,7 +4584,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
   margin: 0;
   font-size: 16px;
   font-weight: 700;
-  color: #e52e06;
+  color: #f16334;
   text-transform: uppercase;
 }
 
@@ -4822,7 +4822,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .slider-navigation_style-4 .slick-arrow:hover {
-  background-color: #e52e06;
+  background-color: #f16334;
 }
 
 .slider-navigation_style-4 .slick-arrow.tty-slick-text-prev {
@@ -5359,7 +5359,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .hm-searchbox:hover .header-search_btn:hover {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff;
 }
 
@@ -5429,7 +5429,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-right_area > ul > li.minicart-wrap > a.minicart-btn .minicart-count_area .item-count {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff;
   position: absolute;
   width: 20px;
@@ -5530,7 +5530,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-right_area > ul > li.contact-us_wrap {
-  background-color: #e52e06;
+  background-color: #f16334;
   width: 58%;
   height: 55px;
   line-height: 55px;
@@ -5566,8 +5566,8 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 .header-right_area > ul > li.contact-us_wrap > a:before {
   content: "";
   border: 9px solid transparent;
-  border-top-color: #e52e06;
-  border-left-color: #e52e06;
+  border-top-color: #f16334;
+  border-left-color: #f16334;
   position: absolute;
   top: 99%;
   left: 10%;
@@ -6074,7 +6074,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-main_area-3 .header-middle_area .header-right_area > ul > li.contact-us_wrap > a {
-  color: #e52e06;
+  color: #f16334;
 }
 
 .header-main_area-3 .header-middle_area .header-right_area > ul > li.contact-us_wrap > a:before {
@@ -6116,7 +6116,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-main_area-3 .header-top_area .main-menu_area > nav > ul > li:hover > a {
-  color: #e52e06 !important;
+  color: #f16334 !important;
 }
 
 .header-main_area-3 .header-top_area .ht-right_area .ht-menu > ul > li > a {
@@ -6131,7 +6131,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-main_area-3 .header-top_area .ht-right_area .ht-menu > ul > li:hover > a {
-  color: #e52e06 !important;
+  color: #f16334 !important;
 }
 
 .header-main_area-3 .header-top_area .ht-right_area .ht-menu > ul > li:last-child > a {
@@ -6155,7 +6155,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .header-main_area-3 .header-sticky .header-right_area > ul > li.contact-us_wrap > a {
-  color: #e52e06;
+  color: #f16334;
 }
 
 .header-main_area-3 .header-sticky .header-right_area > ul > li.contact-us_wrap > a:before {
@@ -6264,7 +6264,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
     color: #ffffff !important;
   }
   .header-main_area-3 .custom-search_col .hm-form_area form.hm-searchbox button.header-search_btn:hover {
-    background-color: #e52e06;
+    background-color: #f16334;
   }
 }
 
@@ -7087,7 +7087,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .shop-product-wrap.listview > [class*="col-"] .list-slide_item .single-product .product-content .product-desc_info .price-box .new-price.new-price-2 {
-  color: #e52e06;
+  color: #f16334;
   font-weight: 700;
 }
 
@@ -7257,7 +7257,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .sp-area .sp-nav .sp-content .price-box .new-price.new-price-2 {
-  color: #e52e06;
+  color: #f16334;
   font-weight: 700;
 }
 
@@ -7342,8 +7342,8 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .sp-area .sp-nav .sp-content .qty-btn_area > ul li > a.qty-cart_btn:hover {
-  background-color: #e52e06;
-  border-color: #e52e06;
+  background-color: #f16334;
+  border-color: #f16334;
 }
 
 .sp-area .sp-nav .sp-content .uren-tag-line {
@@ -7787,7 +7787,7 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 }
 
 .uren-blog_area .blog-img > span.post-date {
-  background-color: #e52e06;
+  background-color: #f16334;
   color: #ffffff;
   position: absolute;
   height: 30px;
