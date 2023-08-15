@@ -57,7 +57,7 @@ const Sidebar = () => {
                         {brands.map((brand)=>
                         <li>
                             <a className="cursor-pointer" onClick={()=> handleProductsByBrand(brand.slug) } >
-                                {brand.title} <span>{brand.products_count}</span>
+                                {brand.title} <span></span>
                             </a>
                         </li>
                         )}

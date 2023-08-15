@@ -30,7 +30,7 @@ const Header = () => {
   }
 
   const handleProductsByBrand = (slug) => {
-    router.push(`brand/${slug}`)
+    router.push(`brand/${slug}`);
   }
   return (
     <div>
