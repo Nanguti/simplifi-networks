@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 const ProductCard = ({ product, file_url, type }) => {
   const router = useRouter();
   const handleProductDetail = (slug) => {
-    router.push(`products/${slug}`);
+    router.push(`/products/${slug}`);
   };
   if (type === "normal") {
     return (
