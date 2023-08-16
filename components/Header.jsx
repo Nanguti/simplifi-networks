@@ -26,11 +26,11 @@ const Header = () => {
 
 
   const handleProductsCategory = (slug)=>{
-    router.push(`category/${slug}`);
+    router.push(`/category/${slug}`);
   }
 
   const handleProductsByBrand = (slug) => {
-    router.push(`brand/${slug}`);
+    router.push(`/brand/${slug}`);
   }
   return (
     <div>
@@ -244,41 +244,42 @@ const Header = () => {
                         </ul>
                       </li>
                       <li className="right-menu">
-                        <a onClick ={()=>handleProductsCategory('wireless-access-points')}>
+                        <a className="cursor-pointer" onClick ={()=>handleProductsCategory('wireless-access-points')}>
                           Wireless Access Points
                         </a>
                         <ul className="cat-dropdown cat-dropdown-2">
                           <li>
-                            <a onClick={()=>handleProductsCategory('wireless-access-points')}>
+                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wireless-access-points')}>
                               Indoor Access Points
                             </a>
-                            <Link href="wireless-access-points.html">
+                            <a className="cursor-pointer">
                               Outdoor Access Points
-                            </Link>
+                            </a>
                           </li>
                           <li>
-                            <Link href="wireless-access-points.html">
+                            <a className="cursor-pointer">
                               Mesh Access Points
-                            </Link>
+                            </a>
                           </li>
                         </ul>
                       </li>
                       <li className="right-menu">
-                        <Link href="wireless-access-points.html">WISP/ISP</Link>
+                        <Link href="#">WISP/ISP</Link>
                         <ul className="cat-dropdown cat-dropdown-2">
                           <li>
-                            <Link href="#">WISP Backhaul</Link>
-                            <Link href="#">WISP Basestation</Link>
-                            <Link href="#">WISP CPE</Link>
+                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wisp-backhaul')}>WISP Backhaul</a>
+                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wisp-basestation')}>WISP Basestation</a>
+                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wisp-backhaul')}>WISP CPE</a>
                           </li>
                         </ul>
                       </li>
                       <li className="right-menu">
-                        <Link href="wireless-access-points.html">Cables</Link>
+                        <Link href="#">Cables</Link>
                         <ul className="cat-dropdown cat-dropdown-2">
                           <li>
-                            <Link href="#">Optical Cables</Link>
-                            <Link href="#">Copper Ethernet Cables</Link>
+                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('cable-management')}>Cable Management</a>
+                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('optical-cable')}>Optical Cable</a>
+                            <a className="cursor-pointer"onClick={()=>handleProductsCategory('copper-ethernet-cable')}>Copper Ethernt Cable</a>
                           </li>
                         </ul>
                       </li>
@@ -290,82 +291,82 @@ const Header = () => {
                           <li className="right-menu cat-mega-title">
                             <ul>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer">
                                   Optical Cable
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('fusion-splicer')}>
                                   Fusion Splicer
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('sft-transceiver')}>
                                   SFT Transceiver
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('splitters')}>
                                   Splitters
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('patch-cords')}>
                                   Patch Cords
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('pigtails')}>
                                   Pigtails
-                                </Link>
+                                </a>
                               </li>
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('distribution-boxes')}>
                                   Distribution Boxes
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('terminal-boxes')}>
                                   Terminal Boxes
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('outdoor-closures')}>
                                   Outdoor Closures
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('pot-terminals')}>
                                   POT Terminals
-                                </Link>
+                                </a>
                               </li>
                               <li>
-                                <Link href="shop-left-sidebar.html">
+                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('accessories')}>
                                   Accessories
-                                </Link>
+                                </a>
                               </li>
                             </ul>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        <Link href="#">Routers Gateways and Management</Link>
+                        <a className="cursor-pointer" onClick={()=>handleProductsCategory('routers-gateways-and-management')}>Routers Gateways and Management</a>
                       </li>
                       <li>
-                        <Link href="#">Surveillance and Security</Link>
+                        <a className="cursor-pointer" onClick={()=>handleProductsCategory('surveillance-security')}>Surveillance and Security</a>
                       </li>
                       <li>
-                        <Link href="#">Network Switches</Link>
+                        <a className="cursor-pointer" onClick={()=>handleProductsByBrand('network-switches')}>Network Switches</a>
                       </li>
                       <li>
-                        <Link href="#">Network Accessories</Link>
+                        <a className="cursor-pointer" onClick={()=>handleProductsByBrand('network-accessories')}>Network Accessories</a>
                       </li>
                       <li>
-                        <Link href="#">Antennas</Link>
+                        <a className="cursor-pointer" onClick={()=>handleProductsCategory('antennas')}>Antennas</a>
                       </li>
                     </ul>
                   </div>
@@ -495,3 +496,4 @@ const Header = () => {
 };
 
 export default Header;
+

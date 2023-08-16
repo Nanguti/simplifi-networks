@@ -327,4 +327,10 @@ element.style {
   display: inline-block;
   padding-right: 15px!important;
 }
+
+.header-right_area > ul > li > a {
+  color: #333333;
+  display: block;
+  font-size: 16px!important;
+}
   
