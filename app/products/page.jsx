@@ -4,20 +4,23 @@ import Sidebar from "@/components/Sidebar";
 import axiosClient from "@/utils/axios";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 export const revalidate = 0;
 const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
-  //const res = await axiosClient.get(`/products`);
-  // const products = res.data.products;
+  const searchParam = useSearchParams();
+  const query = searchParam.get('query');
 
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [nextPageUrl, setNextPageUrl] = useState(null);
-  const [prevPageUrl, setPrevPageUrl] = useState(null);
 
   useEffect(() => {
-    fetchProducts("/products?page=1");
-  }, []);
+    if (query && query !== null) {
+      fetchProducts(`/products/search?query=${encodeURIComponent(query)}`);
+    } else {
+      fetchProducts("/products?page=1");
+    }
+  }, [query]);
 
   const fetchProducts = async (url) => {
     try {

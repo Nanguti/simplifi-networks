@@ -4,6 +4,7 @@ import Newsletter from "./Newsletter";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   // const response = await axiosClient.get('/menu-items')
@@ -372,22 +373,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="custom-search_col col-12">
-                <div className="hm-form_area">
-                  <form action="#" className="hm-searchbox">
-                    {/*  */}
-                    <input
-                      type="text"
-                      placeholder="Enter your search key ..."
-                    />
-                    <button className="header-search_btn" type="submit">
-                      <i className="ion-ios-search-strong">
-                        <span>Search</span>
-                      </i>
-                    </button>
-                  </form>
-                </div>
-              </div>
+              <SearchBar />
               <div className="custom-cart_col col-12">
                 <div className="header-right_area">
                   <ul>
