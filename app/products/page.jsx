@@ -10,8 +10,8 @@ const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
   const searchParam = useSearchParams();
   const query = searchParam.get("query");
-
   const [products, setProducts] = useState([]);
+  const [showPagination, setShowPagination] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -25,10 +25,13 @@ const Products = () => {
   const fetchProducts = async (url) => {
     try {
       const response = await axiosClient.get(url);
-      setProducts(response.data.products.data);
+      const fetchedProducts = response.data.products.data;
+      setProducts(fetchedProducts);
       setCurrentPage(response.data.products.current_page);
       setNextPageUrl(response.data.products.next_page_url);
       setPrevPageUrl(response.data.products.prev_page_url);
+
+      setShowPagination(fetchedProducts.length > 10);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -58,8 +61,8 @@ const Products = () => {
             <div className="col-lg-9 col-md-7 order-1 order-lg-2 order-md-2">
               {query && query !== null ? (
                 <div class="section-title_area">
-                  <div class="gradient-title">
-                    Search results for query: {query}
+                  <div class="search-result-title">
+                    Search results for: {query}
                   </div>
                 </div>
               ) : null}
@@ -160,50 +163,50 @@ const Products = () => {
                     </div>
                   ))
                 ) : (
-                  <p>No results found for the query: {query}</p>
+                  <span className="search-messge">
+                    No results found for "{query}". Please try again!
+                  </span>
                 )}
               </div>
               <div className="row">
                 <div className="col-lg-12">
-                  {products.length > 0 && (
-                    <div className="uren-paginatoin-area">
-                      <div className="row">
-                        <div className="col-lg-12">
-                          <ul className="uren-pagination-box primary-color">
-                            <li>
-                              <a
-                                className="cursor-pointer"
-                                onClick={() =>
-                                  fetchProducts(
-                                    `/products?page=${currentPage - 1}`
-                                  )
-                                }
-                                disabled={currentPage === 1}
-                              >
-                                Previous
-                              </a>
-                            </li>
-                            <li className="active">
-                              <a href="#"> {currentPage} </a>
-                            </li>
+                  <div className="uren-paginatoin-area">
+                    <div className="row">
+                      <div className="col-lg-12">
+                        <ul className="uren-pagination-box primary-color">
+                          <li>
+                            <a
+                              className="cursor-pointer"
+                              onClick={() =>
+                                fetchProducts(
+                                  `/products?page=${currentPage - 1}`
+                                )
+                              }
+                              disabled={currentPage === 1}
+                            >
+                              Previous
+                            </a>
+                          </li>
+                          <li className="active">
+                            <a href="#"> {currentPage} </a>
+                          </li>
 
-                            <li>
-                              <a
-                                className="cursor-pointer"
-                                onClick={() =>
-                                  fetchProducts(
-                                    `/products?page=${currentPage + 1}`
-                                  )
-                                }
-                              >
-                                Next
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
+                          <li>
+                            <a
+                              className="cursor-pointer"
+                              onClick={() =>
+                                fetchProducts(
+                                  `/products?page=${currentPage + 1}`
+                                )
+                              }
+                            >
+                              Next
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               </div>
             </div>
