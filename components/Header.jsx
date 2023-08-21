@@ -37,165 +37,7 @@ const Header = () => {
     <div>
       <Newsletter />
       <header className="header-main_area bg--sapphire">
-        <div className="header-top_area d-lg-block d-none">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-xl-7 col-lg-8">
-                <div className="main-menu_area position-relative">
-                  <nav className="main-nav">
-                    <ul>
-                      <li>
-                        <Link href="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link href="/products">Products</Link>
-                      </li>
-                      <li className="">
-                        <Link href="/about">About Us</Link>
-                      </li>
-                      <li className="">
-                        <Link href="#">Services</Link>
-                      </li>
-                      <li className="dropdown-holder ">
-                        <Link href="#">
-                          Support <i className="ion-ios-arrow-down" />
-                        </Link>
-                        <ul className="hm-dropdown">
-                          {brands.map((brand)=><li key={brand.id}>
-                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
-                          </li>)}
-                         
-                        </ul>
-                      </li>
-                      <li className="dropdown-holder">
-                        <Link href="#">
-                          Resources <i className="ion-ios-arrow-down" />
-                        </Link>
-                        <ul className="hm-dropdown">
-                          <li>
-                            <Link href="/blog">Blog</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Webinars</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Newsletter</Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="">
-                        <Link href="/contact">Contact Us</Link>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <div className="col-xl-5 col-lg-4">
-                <div className="ht-right_area">
-                  <div className="ht-menu">
-                    <ul>
-                      <li>
-                        <Link href="/login">My Account</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="header-top_area header-sticky bg--sapphire">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-xl-7 col-lg-7 d-lg-block d-none">
-                <div className="main-menu_area position-relative">
-                  <nav className="main-nav">
-                    <ul>
-                      <li>
-                        <Link href="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link href="/products">Products</Link>
-                      </li>
-                      <li className="">
-                        <Link href="/about">About Us</Link>
-                      </li>
-                      <li className="">
-                        <Link href="/services">Services</Link>
-                      </li>
-                      <li className="dropdown-holder ">
-                        <Link href="#">
-                          Support <i className="ion-ios-arrow-down" />
-                        </Link>
-                        <ul className="hm-dropdown">
-                        {brands.map((brand)=><li key={brand.id}>
-                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
-                          </li>)}
-                        </ul>
-                      </li>
-                      <li className="dropdown-holder">
-                        <Link href="#">
-                          Resources <i className="ion-ios-arrow-down" />
-                        </Link>
-                        <ul className="hm-dropdown">
-                          <li>
-                            <Link href="/blog">Blog</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Webinars</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Newsletter</Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="">
-                        <Link href="/contact">Contact Us</Link>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <div className="col-sm-3 d-block d-lg-none">
-                <div className="header-logo_area header-sticky_logo">
-                  <Link href="/index">
-                    <img
-                      src="/assets/images/menu/logo/1.png"
-                      alt="Simplifi Networks Logo"
-                    />
-                  </Link>
-                </div>
-              </div>
-              <div className="col-xl-5 col-lg-5 col-sm-9">
-                <div className="header-right_area">
-                  <ul>
-                    <li className="mobile-menu_wrap d-flex d-lg-none">
-                      <Link
-                        href="#mobileMenu"
-                        className="mobile-menu_btn toolbar-btn color--white"
-                      >
-                        <i className="ion-navicon" />
-                      </Link>
-                    </li>
-                    <li className="contact-us_wrap">
-                      <Link href="tel://254727401262">
-                        <i className="ion-android-call" />
-                        Ke: +254 727 401 262
-                      </Link>
-                    </li>
-                    <li className="contact-us_wrap">
-                      <Link href="tel://+256758937003">
-                        <i className="ion-android-call" />
-                        Ug: +256 758 937 003
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="header-middle_area">
+      <div className="header-middle_area">
           <div className="container-fluid">
             <div className="row">
               <div className="custom-logo_col col-12">
@@ -403,6 +245,165 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <div className="header-top_area d-lg-block d-none">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-xl-7 col-lg-8">
+                <div className="main-menu_area position-relative">
+                  <nav className="main-nav">
+                    <ul>
+                      <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/products">Products</Link>
+                      </li>
+                      <li className="">
+                        <Link href="/about">About Us</Link>
+                      </li>
+                      <li className="">
+                        <Link href="#">Services</Link>
+                      </li>
+                      <li className="dropdown-holder ">
+                        <Link href="#">
+                          Support <i className="ion-ios-arrow-down" />
+                        </Link>
+                        <ul className="hm-dropdown">
+                          {brands.map((brand)=><li key={brand.id}>
+                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
+                          </li>)}
+                         
+                        </ul>
+                      </li>
+                      <li className="dropdown-holder">
+                        <Link href="#">
+                          Resources <i className="ion-ios-arrow-down" />
+                        </Link>
+                        <ul className="hm-dropdown">
+                          <li>
+                            <Link href="/blog">Blog</Link>
+                          </li>
+                          <li>
+                            <Link href="#">Webinars</Link>
+                          </li>
+                          <li>
+                            <Link href="#">Newsletter</Link>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="">
+                        <Link href="/contact">Contact Us</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div className="col-xl-5 col-lg-4">
+                <div className="ht-right_area">
+                  <div className="ht-menu">
+                    <ul>
+                      <li>
+                        <Link href="/login">My Account</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="header-top_area header-sticky bg--sapphire">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-xl-7 col-lg-7 d-lg-block d-none">
+                <div className="main-menu_area position-relative">
+                  <nav className="main-nav">
+                    <ul>
+                      <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/products">Products</Link>
+                      </li>
+                      <li className="">
+                        <Link href="/about">About Us</Link>
+                      </li>
+                      <li className="">
+                        <Link href="/services">Services</Link>
+                      </li>
+                      <li className="dropdown-holder ">
+                        <Link href="#">
+                          Support <i className="ion-ios-arrow-down" />
+                        </Link>
+                        <ul className="hm-dropdown">
+                        {brands.map((brand)=><li key={brand.id}>
+                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
+                          </li>)}
+                        </ul>
+                      </li>
+                      <li className="dropdown-holder">
+                        <Link href="#">
+                          Resources <i className="ion-ios-arrow-down" />
+                        </Link>
+                        <ul className="hm-dropdown">
+                          <li>
+                            <Link href="/blog">Blog</Link>
+                          </li>
+                          <li>
+                            <Link href="#">Webinars</Link>
+                          </li>
+                          <li>
+                            <Link href="#">Newsletter</Link>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="">
+                        <Link href="/contact">Contact Us</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div className="col-sm-3 d-block d-lg-none">
+                <div className="header-logo_area header-sticky_logo">
+                  <Link href="/index">
+                    <img
+                      src="/assets/images/menu/logo/1.png"
+                      alt="Simplifi Networks Logo"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="col-xl-5 col-lg-5 col-sm-9">
+                <div className="header-right_area">
+                  <ul>
+                    <li className="mobile-menu_wrap d-flex d-lg-none">
+                      <Link
+                        href="#mobileMenu"
+                        className="mobile-menu_btn toolbar-btn color--white"
+                      >
+                        <i className="ion-navicon" />
+                      </Link>
+                    </li>
+                    <li className="contact-us_wrap">
+                      <Link href="tel://254727401262">
+                        <i className="ion-android-call" />
+                        Ke: +254 727 401 262
+                      </Link>
+                    </li>
+                    <li className="contact-us_wrap">
+                      <Link href="tel://+256758937003">
+                        <i className="ion-android-call" />
+                        Ug: +256 758 937 003
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
         <div className="mobile-menu_wrapper" id="mobileMenu">
           <div className="offcanvas-menu-inner">
