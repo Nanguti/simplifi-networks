@@ -333,4 +333,6 @@ element.style {
   display: block;
   font-size: 16px!important;
 }
-  
+.bg--sapphire {
+  border-top: 2px solid #04455d;
+}

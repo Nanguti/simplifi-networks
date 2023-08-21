@@ -2,7 +2,6 @@ import Banners from "@/components/Banners";
 import Brands from "@/components/Brands";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import axiosClient from "@/utils/axios";
-import Image from "next/image";
 import Link from "next/link";
 export const revalidate = 0;
 const Home = async () => {

@@ -65,21 +65,21 @@ const Header = () => {
                         <ul className="cat-mega-menu">
                           <li className="right-menu cat-mega-title">
                             <ul>
-                              {brands.slice(0, 5).map((brand)=><li>
+                              {brands.slice(0, 5).map((brand)=><li key={brand.id}>
                                 <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)} >{brand.title}</a>
                               </li>)}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
-                              {brands.slice(5, 10).map((brand)=><li>
+                              {brands.slice(5, 10).map((brand)=><li key={brand.id}>
                                 <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)}>{brand.title}</a>
                               </li>)}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
-                              {brands.slice(10, 15).map((brand)=><li>
+                              {brands.slice(10, 15).map((brand)=><li key={brand.id}>
                                 <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)}>{brand.title}</a>
                               </li>)}
                             </ul>
