@@ -9,7 +9,7 @@ export const revalidate = 0;
 const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
   const searchParam = useSearchParams();
-  const query = searchParam.get('query');
+  const query = searchParam.get("query");
 
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -56,6 +56,14 @@ const Products = () => {
               <Sidebar />
             </div>
             <div className="col-lg-9 col-md-7 order-1 order-lg-2 order-md-2">
+              {query && query !== null ? (
+                <div class="section-title_area">
+                  <div class="gradient-title">
+                    Search results for query: {query}
+                  </div>
+                </div>
+              ) : null}
+
               <div className="shop-toolbar">
                 <div className="product-view-mode">
                   <a
@@ -141,55 +149,61 @@ const Products = () => {
                 </div>
               </div>
               <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
-                {products.map((product) => (
-                  <div className="col-lg-4" key={product.id}>
-                    <ProductCard
-                      product={product}
-                      file_url={file_url}
-                      type="normal"
-                    />
-                  </div>
-                ))}
+                {products.length > 0 ? (
+                  products.map((product) => (
+                    <div className="col-lg-4" key={product.id}>
+                      <ProductCard
+                        product={product}
+                        file_url={file_url}
+                        type="normal"
+                      />
+                    </div>
+                  ))
+                ) : (
+                  <p>No results found for the query: {query}</p>
+                )}
               </div>
               <div className="row">
                 <div className="col-lg-12">
-                  <div className="uren-paginatoin-area">
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <ul className="uren-pagination-box primary-color">
-                          <li>
-                            <a
-                              className="cursor-pointer"
-                              onClick={() =>
-                                fetchProducts(
-                                  `/products?page=${currentPage - 1}`
-                                )
-                              }
-                              disabled={currentPage === 1}
-                            >
-                              Previous
-                            </a>
-                          </li>
-                          <li className="active">
-                            <a href="#"> {currentPage} </a>
-                          </li>
+                  {products.length > 0 && (
+                    <div className="uren-paginatoin-area">
+                      <div className="row">
+                        <div className="col-lg-12">
+                          <ul className="uren-pagination-box primary-color">
+                            <li>
+                              <a
+                                className="cursor-pointer"
+                                onClick={() =>
+                                  fetchProducts(
+                                    `/products?page=${currentPage - 1}`
+                                  )
+                                }
+                                disabled={currentPage === 1}
+                              >
+                                Previous
+                              </a>
+                            </li>
+                            <li className="active">
+                              <a href="#"> {currentPage} </a>
+                            </li>
 
-                          <li>
-                            <a
-                              className="cursor-pointer"
-                              onClick={() =>
-                                fetchProducts(
-                                  `/products?page=${currentPage + 1}`
-                                )
-                              }
-                            >
-                              Next
-                            </a>
-                          </li>
-                        </ul>
+                            <li>
+                              <a
+                                className="cursor-pointer"
+                                onClick={() =>
+                                  fetchProducts(
+                                    `/products?page=${currentPage + 1}`
+                                  )
+                                }
+                              >
+                                Next
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
