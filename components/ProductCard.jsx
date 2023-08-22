@@ -14,7 +14,7 @@ const ProductCard = ({ product, file_url, type }) => {
               <div className="product-img">
                 <a
                   onClick={() => handleProductDetail(product.slug)}
-                  className="cursor-pointer"
+                  className="cursor-pointer product-tittle-image"
                 >
                   <img
                     className="primary-img"
@@ -53,7 +53,7 @@ const ProductCard = ({ product, file_url, type }) => {
                       className="product-name cursor-pointer"
                       onClick={() => handleProductDetail(product.slug)}
                     >
-                      {product.title}
+                      <span className="product-title">{product.title}</span>
                     </a>
                   </h6>
                   <div className="price-box"></div>
@@ -88,7 +88,7 @@ const ProductCard = ({ product, file_url, type }) => {
                     className="product-name cursor-pointer"
                     onClick={() => handleProductDetail(product.slug)}
                   >
-                    Veniam officiis voluptates
+                    {product.title}
                   </a>
                 </h6>
                 <div className="product-short_desc">

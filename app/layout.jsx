@@ -14,6 +14,8 @@ import Script from "next/script";
 // import { Inter } from 'next/font/google'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Suspense } from "react";
+import Loading from "./Loading";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -29,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className="template-color-1">
         <div className="main-wrapper">
           <Header />
+          <Suspense fallback={<Loading />}></Suspense>
           {children}
           <Footer />
         </div>

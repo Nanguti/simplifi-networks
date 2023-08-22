@@ -364,10 +364,14 @@ element.style {
 }
 
 .search-messge {
-  font-family: "Work Sans", sans-serif;
+  font-family: Lato, sans-serif;
   line-height: 24px;
   margin: 40px 20px;
   color: #f16334;
   font-weight: 600;
   font-size: 20px;
+}
+
+.product-tittle-image {
+  margin-bottom: 10px;
 }

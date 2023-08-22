@@ -11,7 +11,6 @@ const Products = () => {
   const searchParam = useSearchParams();
   const query = searchParam.get("query");
   const [products, setProducts] = useState([]);
-  const [showPagination, setShowPagination] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -126,27 +125,13 @@ const Products = () => {
                 </div>
                 <div className="product-item-selection_area">
                   <div className="product-short">
-                    <label className="select-label">Short By:</label>
+                    <label className="select-label">Sort By:</label>
                     <select className="myniceselect nice-select">
                       <option value={1}>Default</option>
                       <option value={2}>Name, A to Z</option>
                       <option value={3}>Name, Z to A</option>
-                      <option value={4}>Price, low to high</option>
-                      <option value={5}>Price, high to low</option>
-                      <option value={5}>Rating (Highest)</option>
-                      <option value={5}>Rating (Lowest)</option>
                       <option value={5}>Model (A - Z)</option>
                       <option value={5}>Model (Z - A)</option>
-                    </select>
-                  </div>
-                  <div className="product-showing">
-                    <label className="select-label">Show:</label>
-                    <select className="myniceselect short-select nice-select">
-                      <option value={1}>15</option>
-                      <option value={1}>1</option>
-                      <option value={1}>2</option>
-                      <option value={1}>3</option>
-                      <option value={1}>4</option>
                     </select>
                   </div>
                 </div>
@@ -154,7 +139,7 @@ const Products = () => {
               <div className="shop-product-wrap grid gridview-3 img-hover-effect_area row">
                 {products.length > 0 ? (
                   products.map((product) => (
-                    <div className="col-lg-4" key={product.id}>
+                    <div className="col-lg-3" key={product.id}>
                       <ProductCard
                         product={product}
                         file_url={file_url}
