@@ -29,20 +29,20 @@ const ProductComponent = ({ photo, images }) => {
           className="main-image"
         />
       </div>
-      {images.length > 0 && (
-        <div className="thumbnails">
-          {images.map((image, index) => (
-            <div key={index} className="image-card">
-              <img
-                src={image.original_url}
-                alt={`Product Image ${index + 1}`}
-                className={`thumbnail ${mainImage === index ? "active" : ""}`}
-                onClick={() => setMainImage(index)}
-              />
-            </div>
-          ))}
-        </div>
-      )}
+      {/* {images.length > 0 && ( */}
+      <div className="thumbnails">
+        {images.map((image, index) => (
+          <div key={index} className="image-card">
+            <img
+              src={image.original_url}
+              alt={`Product Image ${index + 1}`}
+              className={`thumbnail ${mainImage === index ? "active" : ""}`}
+              onClick={() => setMainImage(index)}
+            />
+          </div>
+        ))}
+      </div>
+      {/* )} */}
       {/* <div className="arrows">
         <span className="arrow left-arrow" onClick={handlePrevious}>
           {"<"}

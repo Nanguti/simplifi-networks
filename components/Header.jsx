@@ -1,16 +1,19 @@
-'use client'
+"use client";
 import axiosClient from "@/utils/axios";
 import Newsletter from "./Newsletter";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import SearchBar from "./SearchBar";
+import Menu from "./Menu";
+import { map } from "jquery";
 
 const Header = () => {
   // const response = await axiosClient.get('/menu-items')
   // const {brands, catageories} = response.data
-  const router = useRouter()
-  const [brands, setBrands] = useState([])
+  const router = useRouter();
+  const [brands, setBrands] = useState([]);
+  const [categories, setCategories] = useState([]);
   useEffect(() => {
     fetchMenuItems("/menu-items");
   }, []);
@@ -19,25 +22,24 @@ const Header = () => {
     try {
       const response = await axiosClient.get(url);
       setBrands(response.data.brands);
+      setCategories(response.data.categories);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-
-
-  const handleProductsCategory = (slug)=>{
+  const handleProductsCategory = (slug) => {
     router.push(`/category/${slug}`);
-  }
+  };
 
   const handleProductsByBrand = (slug) => {
     router.push(`/brand/${slug}`);
-  }
+  };
   return (
     <div>
       <Newsletter />
       <header className="header-main_area bg--sapphire">
-      <div className="header-middle_area">
+        <div className="header-middle_area">
           <div className="container-fluid">
             <div className="row">
               <div className="custom-logo_col col-12">
@@ -65,152 +67,228 @@ const Header = () => {
                         <ul className="cat-mega-menu">
                           <li className="right-menu cat-mega-title">
                             <ul>
-                              {brands.slice(0, 5).map((brand)=><li key={brand.id}>
-                                <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)} >{brand.title}</a>
-                              </li>)}
+                              {brands.slice(0, 5).map((brand) => (
+                                <li key={brand.id}>
+                                  <a
+                                    className="cursor-pointer"
+                                    onClick={() =>
+                                      handleProductsByBrand(brand.slug)
+                                    }
+                                  >
+                                    {brand.title}
+                                  </a>
+                                </li>
+                              ))}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
-                              {brands.slice(5, 10).map((brand)=><li key={brand.id}>
-                                <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)}>{brand.title}</a>
-                              </li>)}
+                              {brands.slice(5, 10).map((brand) => (
+                                <li key={brand.id}>
+                                  <a
+                                    className="cursor-pointer"
+                                    onClick={() =>
+                                      handleProductsByBrand(brand.slug)
+                                    }
+                                  >
+                                    {brand.title}
+                                  </a>
+                                </li>
+                              ))}
                             </ul>
                           </li>
                           <li className="right-menu cat-mega-title">
                             <ul>
-                              {brands.slice(10, 15).map((brand)=><li key={brand.id}>
-                                <a className="cursor-pointer" onClick={()=>handleProductsByBrand(brand.slug)}>{brand.title}</a>
-                              </li>)}
+                              {brands.slice(10, 15).map((brand) => (
+                                <li key={brand.id}>
+                                  <a
+                                    className="cursor-pointer"
+                                    onClick={() =>
+                                      handleProductsByBrand(brand.slug)
+                                    }
+                                  >
+                                    {brand.title}
+                                  </a>
+                                </li>
+                              ))}
                             </ul>
                           </li>
                         </ul>
                       </li>
-                      <li className="right-menu">
-                        <a className="cursor-pointer" onClick ={()=>handleProductsCategory('wireless-access-points')}>
-                          Wireless Access Points
-                        </a>
-                        <ul className="cat-dropdown cat-dropdown-2">
-                          <li>
-                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wireless-access-points')}>
-                              Indoor Access Points
-                            </a>
-                            <a className="cursor-pointer">
-                              Outdoor Access Points
-                            </a>
-                          </li>
-                          <li>
-                            <a className="cursor-pointer">
-                              Mesh Access Points
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="right-menu">
-                        <Link href="#">WISP/ISP</Link>
-                        <ul className="cat-dropdown cat-dropdown-2">
-                          <li>
-                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wisp-backhaul')}>WISP Backhaul</a>
-                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wisp-basestation')}>WISP Basestation</a>
-                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('wisp-backhaul')}>WISP CPE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="right-menu">
-                        <Link href="#">Cables</Link>
-                        <ul className="cat-dropdown cat-dropdown-2">
-                          <li>
-                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('cable-management')}>Cable Management</a>
-                            <a className="cursor-pointer" onClick={()=>handleProductsCategory('optical-cable')}>Optical Cable</a>
-                            <a className="cursor-pointer"onClick={()=>handleProductsCategory('copper-ethernet-cable')}>Copper Ethernt Cable</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="right-menu">
-                        <Link href="shop-left-sidebar.html">
-                          Fiber and GPON
-                        </Link>
-                        <ul className="cat-mega-menu cat-mega-menu-3">
-                          <li className="right-menu cat-mega-title">
-                            <ul>
-                              <li>
-                                <a className="cursor-pointer">
-                                  Optical Cable
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('fusion-splicer')}>
-                                  Fusion Splicer
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('sft-transceiver')}>
-                                  SFT Transceiver
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('splitters')}>
-                                  Splitters
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('patch-cords')}>
-                                  Patch Cords
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('pigtails')}>
-                                  Pigtails
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li className="right-menu cat-mega-title">
-                            <ul>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('distribution-boxes')}>
-                                  Distribution Boxes
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('terminal-boxes')}>
-                                  Terminal Boxes
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('outdoor-closures')}>
-                                  Outdoor Closures
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('pot-terminals')}>
-                                  POT Terminals
-                                </a>
-                              </li>
-                              <li>
-                                <a className="cursor-pointer" onClick={()=>handleProductsCategory('accessories')}>
-                                  Accessories
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a className="cursor-pointer" onClick={()=>handleProductsCategory('routers-gateways-and-management')}>Routers Gateways and Management</a>
-                      </li>
-                      <li>
-                        <a className="cursor-pointer" onClick={()=>handleProductsCategory('surveillance-security')}>Surveillance and Security</a>
-                      </li>
-                      <li>
-                        <a className="cursor-pointer" onClick={()=>handleProductsByBrand('network-switches')}>Network Switches</a>
-                      </li>
-                      <li>
-                        <a className="cursor-pointer" onClick={()=>handleProductsByBrand('network-accessories')}>Network Accessories</a>
-                      </li>
-                      <li>
-                        <a className="cursor-pointer" onClick={()=>handleProductsCategory('antennas')}>Antennas</a>
-                      </li>
+
+                      {categories.map((category) => {
+                        if (category.slug === "wireless-access-points") {
+                          return (
+                            <li class="right-menu">
+                              <a
+                                className="cursor-pointer"
+                                onClick={() =>
+                                  handleProductsCategory(category.slug)
+                                }
+                              >
+                                {category.title}
+                              </a>
+                              <ul class="cat-mega-menu cat-mega-menu-2">
+                                {category.sub_categories.map((subCat) => {
+                                  return (
+                                    <li class="right-menu cat-mega-title">
+                                      <a
+                                        className="cursor-pointer"
+                                        onClick={() =>
+                                          handleProductsCategory(subCat.slug)
+                                        }
+                                      >
+                                        {subCat.title}
+                                      </a>
+
+                                      <ul>
+                                        {subCat.sub_categories.map(
+                                          (subSubCat) => {
+                                            return (
+                                              <li>
+                                                <a
+                                                  className="cursor-pointer"
+                                                  onClick={() =>
+                                                    handleProductsCategory(
+                                                      subSubCat.slug
+                                                    )
+                                                  }
+                                                >
+                                                  {subSubCat.title}
+                                                </a>
+                                              </li>
+                                            );
+                                          }
+                                        )}
+                                      </ul>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </li>
+                          );
+                        } else if (
+                          category.sub_categories &&
+                          category.sub_categories.length > 0
+                        ) {
+                          return (
+                            <li className="right-menu">
+                              <a
+                                className="cursor-pointer"
+                                onClick={() =>
+                                  handleProductsCategory(category.slug)
+                                }
+                              >
+                                {category.title}
+                              </a>
+                              <ul className="cat-dropdown cat-dropdown-2">
+                                {category.sub_categories.map((child) => {
+                                  if (
+                                    child.sub_categories &&
+                                    child.sub_categories.length > 0
+                                  ) {
+                                    return (
+                                      <li className="right-menu">
+                                        <Link href="#">
+                                          Browse by Manufacturer
+                                        </Link>
+                                        <ul className="cat-mega-menu">
+                                          <li className="right-menu cat-mega-title">
+                                            <ul>
+                                              {brands
+                                                .slice(0, 5)
+                                                .map((brand) => (
+                                                  <li key={brand.id}>
+                                                    <a
+                                                      className="cursor-pointer"
+                                                      onClick={() =>
+                                                        handleProductsByBrand(
+                                                          brand.slug
+                                                        )
+                                                      }
+                                                    >
+                                                      {brand.title}
+                                                    </a>
+                                                  </li>
+                                                ))}
+                                            </ul>
+                                          </li>
+                                          <li className="right-menu cat-mega-title">
+                                            <ul>
+                                              {brands
+                                                .slice(5, 10)
+                                                .map((brand) => (
+                                                  <li key={brand.id}>
+                                                    <a
+                                                      className="cursor-pointer"
+                                                      onClick={() =>
+                                                        handleProductsByBrand(
+                                                          brand.slug
+                                                        )
+                                                      }
+                                                    >
+                                                      {brand.title}
+                                                    </a>
+                                                  </li>
+                                                ))}
+                                            </ul>
+                                          </li>
+                                          <li className="right-menu cat-mega-title">
+                                            <ul>
+                                              {brands
+                                                .slice(10, 15)
+                                                .map((brand) => (
+                                                  <li key={brand.id}>
+                                                    <a
+                                                      className="cursor-pointer"
+                                                      onClick={() =>
+                                                        handleProductsByBrand(
+                                                          brand.slug
+                                                        )
+                                                      }
+                                                    >
+                                                      {brand.title}
+                                                    </a>
+                                                  </li>
+                                                ))}
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                      </li>
+                                    );
+                                  } else {
+                                    return (
+                                      <li>
+                                        <a
+                                          className="cursor-pointer"
+                                          onClick={() =>
+                                            handleProductsCategory(child.slug)
+                                          }
+                                        >
+                                          {child.title}
+                                        </a>
+                                      </li>
+                                    );
+                                  }
+                                })}
+                              </ul>
+                            </li>
+                          );
+                        } else {
+                          return (
+                            <li>
+                              <a
+                                className="cursor-pointer"
+                                onClick={() =>
+                                  handleProductsCategory(category.slug)
+                                }
+                              >
+                                {category.title}
+                              </a>
+                            </li>
+                          );
+                        }
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -269,10 +347,13 @@ const Header = () => {
                           Support <i className="ion-ios-arrow-down" />
                         </Link>
                         <ul className="hm-dropdown">
-                          {brands.map((brand)=><li key={brand.id}>
-                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
-                          </li>)}
-                         
+                          {brands.map((brand) => (
+                            <li key={brand.id}>
+                              <Link href={`${brand.brand_url}`} target="_blank">
+                                {brand.title}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       </li>
                       <li className="dropdown-holder">
@@ -336,9 +417,13 @@ const Header = () => {
                           Support <i className="ion-ios-arrow-down" />
                         </Link>
                         <ul className="hm-dropdown">
-                        {brands.map((brand)=><li key={brand.id}>
-                            <Link href={`${brand.brand_url}`} target="_blank">{brand.title}</Link>
-                          </li>)}
+                          {brands.map((brand) => (
+                            <li key={brand.id}>
+                              <Link href={`${brand.brand_url}`} target="_blank">
+                                {brand.title}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       </li>
                       <li className="dropdown-holder">
@@ -403,7 +488,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-        
 
         <div className="mobile-menu_wrapper" id="mobileMenu">
           <div className="offcanvas-menu-inner">
@@ -483,4 +567,3 @@ const Header = () => {
 };
 
 export default Header;
-
