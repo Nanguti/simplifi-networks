@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import SearchBar from "./SearchBar";
-import Menu from "./Menu";
 import { map } from "jquery";
 
 const Header = () => {
