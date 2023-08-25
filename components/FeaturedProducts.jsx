@@ -7,6 +7,8 @@ import parse from "html-react-parser";
 const FeaturedProducts = ({ products, file_url }) => {
   const sliderRef = useRef(null);
   const router = useRouter();
+  const MAX_SUMMARY_LENGTH = 150;
+
   const handleProductDetail = (slug) => {
     router.push(`products/${slug}`);
   };
@@ -48,6 +50,12 @@ const FeaturedProducts = ({ products, file_url }) => {
       },
     ],
   };
+
+  const truncateSummary = (summary) => {
+    return summary.length > MAX_SUMMARY_LENGTH
+      ? summary.substring(0, MAX_SUMMARY_LENGTH) + "..."
+      : summary;
+  };
   return (
     <Slider ref={sliderRef} {...settings}>
       {products.map((product) => (
@@ -70,7 +78,7 @@ const FeaturedProducts = ({ products, file_url }) => {
                   {parse(product.title)}
                 </a>
               </h3>
-              {parse(product.summary)}
+              {parse(truncateSummary(product.summary))}
               <div className="uren-btn-ps_left">
                 <a
                   className="uren-btn cursor-pointer"
