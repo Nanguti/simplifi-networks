@@ -19,7 +19,7 @@ const Footer = () => {
                   </p>
                   <div className="newsletter-form_wrap">
                     <form
-                      action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&id=05d85f18ef"
+                      action="#"
                       method="post"
                       id="mc-embedded-subscribe-form"
                       name="mc-embedded-subscribe-form"
@@ -150,17 +150,13 @@ const Footer = () => {
                             <Link href="#">About Us</Link>
                           </li>
                           <li>
-                            <Link href="#">
-                              Delivery Information
-                            </Link>
+                            <Link href="#">Delivery Information</Link>
                           </li>
                           <li>
                             <Link href="#">Privacy Policy</Link>
                           </li>
                           <li>
-                            <Link href="#">
-                              Terms &amp; Conditions
-                            </Link>
+                            <Link href="#">Terms &amp; Conditions</Link>
                           </li>
                         </ul>
                       </div>
@@ -193,17 +189,13 @@ const Footer = () => {
                             <Link href="#">About Us</Link>
                           </li>
                           <li>
-                            <Link href="#">
-                              Delivery Information
-                            </Link>
+                            <Link href="#">Delivery Information</Link>
                           </li>
                           <li>
                             <Link href="#">Privacy Policy</Link>
                           </li>
                           <li>
-                            <Link href="#">
-                              Terms &amp; Conditions
-                            </Link>
+                            <Link href="#">Terms &amp; Conditions</Link>
                           </li>
                         </ul>
                       </div>
