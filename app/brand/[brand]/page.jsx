@@ -154,6 +154,7 @@ const ProductsByBrand = ({ params }) => {
                             return (
                               <>
                                 <li
+                                  key={link.label}
                                   className={`cursor-pointer ${
                                     link.active ? "active" : ""
                                   }`}

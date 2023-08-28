@@ -32,12 +32,12 @@ const Products = () => {
       console.error("Error fetching products:", error);
     }
   };
-  // const handlePagination = async (url) => {
-  //   const response = await axiosClient.post(`${url}&slug=${slug}`);
-  //   setProducts(response.data.results.data);
-  //   setLinks(response.data.results.links);
-  //   console.log("log links here " + links);
-  // };
+  const handlePagination = async (label) => {
+    const response = await axiosClient.get(`/products?page=${label}`);
+    console.log("response here " + response);
+    setProducts(response.data.products.data);
+    setLinks(response.data.products.links);
+  };
   return (
     <>
       <div className="breadcrumb-area">
@@ -171,7 +171,11 @@ const Products = () => {
                                     link.active ? "active" : ""
                                   }`}
                                 >
-                                  <Link href="#">{parse(link.label)} </Link>
+                                  <a
+                                    onClick={() => handlePagination(link.label)}
+                                  >
+                                    {parse(link.label)}{" "}
+                                  </a>
                                 </li>
                               </>
                             );
