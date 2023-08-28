@@ -423,3 +423,10 @@ li:hover > button svg {
 .category-sidebar-width {
   width: 100%;
 }
+
+.product-main-image-container {
+  position: relative;
+  max-width: 350px;
+  height: auto;
+  overflow: hidden;
+}

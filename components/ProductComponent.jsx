@@ -21,8 +21,8 @@ const ProductComponent = ({ photo, images }) => {
   };
 
   return (
-    <div className="product-detail-container">
-      <div className="main-image-container">
+    <div className="">
+      <div className="product-main-image-container">
         <img
           src={`${file_url}/${photo}`}
           alt={`Product Image ${mainImage + 1}`}

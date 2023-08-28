@@ -5,13 +5,14 @@ import axiosClient from "@/utils/axios";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import parse from "html-react-parser";
 export const revalidate = 0;
 const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
   const searchParam = useSearchParams();
   const query = searchParam.get("query");
   const [products, setProducts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [links, setLinks] = useState([]);
 
   useEffect(() => {
     if (query && query !== null) {
@@ -26,15 +27,17 @@ const Products = () => {
       const response = await axiosClient.get(url);
       const fetchedProducts = response.data.products.data;
       setProducts(fetchedProducts);
-      setCurrentPage(response.data.products.current_page);
-      setNextPageUrl(response.data.products.next_page_url);
-      setPrevPageUrl(response.data.products.prev_page_url);
-
-      setShowPagination(fetchedProducts.length > 10);
+      setLinks(response.data.products.links);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
   };
+  // const handlePagination = async (url) => {
+  //   const response = await axiosClient.post(`${url}&slug=${slug}`);
+  //   setProducts(response.data.results.data);
+  //   setLinks(response.data.results.links);
+  //   console.log("log links here " + links);
+  // };
   return (
     <>
       <div className="breadcrumb-area">
@@ -159,35 +162,22 @@ const Products = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <ul className="uren-pagination-box primary-color">
-                          <li>
-                            <a
-                              className="cursor-pointer"
-                              onClick={() =>
-                                fetchProducts(
-                                  `/products?page=${currentPage - 1}`
-                                )
-                              }
-                              disabled={currentPage === 1}
-                            >
-                              Previous
-                            </a>
-                          </li>
-                          <li className="active">
-                            <a href="#"> {currentPage} </a>
-                          </li>
-
-                          <li>
-                            <a
-                              className="cursor-pointer"
-                              onClick={() =>
-                                fetchProducts(
-                                  `/products?page=${currentPage + 1}`
-                                )
-                              }
-                            >
-                              Next
-                            </a>
-                          </li>
+                          {links.map((link) => {
+                            return (
+                              <>
+                                <li
+                                  key={link.label}
+                                  className={`cursor-pointer ${
+                                    link.active ? "active" : ""
+                                  }`}
+                                >
+                                  <Link href={`${link.url}`}>
+                                    {parse(link.label)}{" "}
+                                  </Link>
+                                </li>
+                              </>
+                            );
+                          })}
                         </ul>
                       </div>
                     </div>
