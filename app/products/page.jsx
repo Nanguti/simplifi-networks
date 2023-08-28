@@ -171,9 +171,7 @@ const Products = () => {
                                     link.active ? "active" : ""
                                   }`}
                                 >
-                                  <Link href={`${link.url}`}>
-                                    {parse(link.label)}{" "}
-                                  </Link>
+                                  <Link href="#">{parse(link.label)} </Link>
                                 </li>
                               </>
                             );
