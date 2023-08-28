@@ -17,7 +17,7 @@ const ProductsCategory = async ({ params }) => {
             <h2>Products</h2>
             <ul>
               <li>
-                <Link href="/">Home </Link>
+                <Link href="/">Home</Link>
               </li>
               <li className="active">{category.title}</li>
             </ul>

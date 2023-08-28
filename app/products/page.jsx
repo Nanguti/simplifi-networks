@@ -59,8 +59,8 @@ const Products = () => {
             </div>
             <div className="col-lg-9 col-md-7 order-1 order-lg-2 order-md-2">
               {query && query !== null ? (
-                <div class="section-title_area">
-                  <div class="search-result-title">
+                <div className="section-title_area">
+                  <div className="search-result-title">
                     Search results for: {query}
                   </div>
                 </div>

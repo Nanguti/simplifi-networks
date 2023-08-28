@@ -118,7 +118,7 @@ const Header = () => {
                       {categories.map((category) => {
                         if (category.slug === "wireless-access-points") {
                           return (
-                            <li class="right-menu">
+                            <li className="right-menu">
                               <a
                                 className="cursor-pointer"
                                 onClick={() =>
@@ -127,10 +127,10 @@ const Header = () => {
                               >
                                 {category.title}
                               </a>
-                              <ul class="cat-mega-menu cat-mega-menu-2">
+                              <ul className="cat-mega-menu cat-mega-menu-2">
                                 {category.sub_categories.map((subCat) => {
                                   return (
-                                    <li class="right-menu cat-mega-title">
+                                    <li className="right-menu cat-mega-title">
                                       <a
                                         className="cursor-pointer"
                                         onClick={() =>
