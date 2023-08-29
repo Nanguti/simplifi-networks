@@ -31,8 +31,7 @@ export default function RootLayout({ children }) {
       <body className="template-color-1">
         <div className="main-wrapper">
           <Header />
-          <Suspense fallback={<Loading />}></Suspense>
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
           <Footer />
         </div>
         <Script src="/assets/js/vendor/jquery-1.12.4.min.js" />

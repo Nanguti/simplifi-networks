@@ -1,9 +1,14 @@
 "use client";
 import { useRouter } from "next/navigation";
-const ProductCard = ({ product, file_url, type }) => {
+import BeautifulModal from "./BeautifulModal";
+const ProductCard = ({ product, file_url, type, onQuickView }) => {
   const router = useRouter();
+
   const handleProductDetail = (slug) => {
     router.push(`/products/${slug}`);
+  };
+  const handleQuickView = () => {
+    onQuickView(product);
   };
   if (type === "normal") {
     return (
@@ -29,18 +34,19 @@ const ProductCard = ({ product, file_url, type }) => {
                 </a>
                 <div className="add-actions">
                   <ul>
-                    <li
-                      className="quick-view-btn"
-                      data-toggle="modal"
-                      data-target="#exampleModalCenter"
-                    >
+                    <li onClick={handleQuickView} className="cursor-pointer">
                       <a
-                        href="#"
                         data-toggle="tooltip"
                         data-placement="top"
                         title="Quick View"
                       >
-                        <i className="ion-android-open" />
+                        <button
+                          onClick={handleQuickView}
+                          className="cursor-pointer"
+                        >
+                          {" "}
+                          <i className="ion-android-open" />
+                        </button>
                       </a>
                     </li>
                   </ul>
@@ -101,6 +107,7 @@ const ProductCard = ({ product, file_url, type }) => {
                     className="quick-view-btn"
                     data-toggle="modal"
                     data-target="#exampleModalCenter"
+                    data-product-id="12345"
                   >
                     <a
                       href="#"
@@ -119,39 +126,6 @@ const ProductCard = ({ product, file_url, type }) => {
       </>
     );
   }
-  return (
-    <>
-      <div className="slide-inner">
-        <div className="slide-image_area">
-          <a
-            onClick={() => handleProductDetail(product.slug)}
-            className="cursor-pointer"
-          >
-            <img src={`${file_url}/${product.photo}`} alt={product.title} />
-          </a>
-        </div>
-        <div className="slide-content_area">
-          <h3>
-            <a
-              onClick={() => handleProductDetail(product.slug)}
-              className="cursor-pointer"
-            >
-              {product.title}
-            </a>
-          </h3>
-          <p>{product.summary}</p>
-          <div className="uren-btn-ps_left">
-            <a
-              className="uren-btn cursor-pointer"
-              onClick={() => handleProductDetail(product.slug)}
-            >
-              View
-            </a>
-          </div>
-        </div>
-      </div>
-    </>
-  );
 };
 
 export default ProductCard;

@@ -6,9 +6,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import parse from "html-react-parser";
+import BeautifulModal from "@/components/BeautifulModal";
 export const revalidate = 0;
 const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const searchParam = useSearchParams();
   const query = searchParam.get("query");
   const [products, setProducts] = useState([]);
@@ -37,6 +40,16 @@ const Products = () => {
     console.log("response here " + response);
     setProducts(response.data.products.data);
     setLinks(response.data.products.links);
+  };
+
+  const handleQuickView = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setIsModalOpen(false);
   };
   return (
     <>
@@ -147,6 +160,12 @@ const Products = () => {
                         product={product}
                         file_url={file_url}
                         type="normal"
+                        onQuickView={handleQuickView}
+                      />
+                      <BeautifulModal
+                        product={selectedProduct}
+                        closeModal={closeModal}
+                        isModalOpen={isModalOpen}
                       />
                     </div>
                   ))

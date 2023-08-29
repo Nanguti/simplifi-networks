@@ -430,3 +430,81 @@ li:hover > button svg {
   height: auto;
   overflow: hidden;
 }
+
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.modal-exit {
+  opacity: 1;
+}
+.modal-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.modal-drop {
+  animation: modalDropIn 0.5s ease-in-out;
+}
+
+.modal-exit {
+  animation: modalFoldOut 0.5s ease-in-out;
+}
+
+@keyframes modalDropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalFoldOut {
+  0% {
+    transform: translateY(0) rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+.product-modal-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.medium-title {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 700;
+  display: inline-block;
+  place-items: center;
+  position: relative;
+  background: linear-gradient(90deg, #f16334, #04455d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: moveText 5s linear infinite;
+  padding: 10px 0;
+}
+.social-media-line-height {
+  line-height: 2;
+}
