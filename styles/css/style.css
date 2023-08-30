@@ -58,6 +58,7 @@ body {
   color: #999999;
   font-size: 14px;
   line-height: 24px;
+  overflow-x: hidden!important;
 }
 
 h1,
