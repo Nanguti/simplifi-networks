@@ -16,6 +16,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
 import Loading from "./Loading";
+import { ToastContainer } from "react-toastify";
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <div className="main-wrapper">
           <Header />
           <Suspense fallback={<Loading />}>{children}</Suspense>
+          <ToastContainer />
           <Footer />
         </div>
         <Script src="/assets/js/vendor/jquery-1.12.4.min.js" />

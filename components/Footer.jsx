@@ -1,7 +1,34 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Link from "next/link";
+import axiosClient from "@/utils/axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+  });
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      email: formData.email,
+    };
+    try {
+      await axiosClient.post("/newsletter/subscribe", data);
+      toast.success("You have successfully subscribed to our newsletter!");
+    } catch (errors) {
+      toast.error(`Subscription failed. ${errors.response.data.errors.email}`);
+    }
+  };
   return (
     <div>
       {" "}
@@ -18,24 +45,20 @@ const Footer = () => {
                     offers.
                   </p>
                   <div className="newsletter-form_wrap">
-                    <form
-                      action="#"
-                      method="post"
-                      id="mc-embedded-subscribe-form"
-                      name="mc-embedded-subscribe-form"
-                      className="newsletters-form validate"
-                      target="_blank"
-                      noValidate=""
-                    >
+                    <form onSubmit={handleSubmit}>
                       <div id="mc_embed_signup_scroll">
                         <div id="mc-form" className="mc-form subscribe-form">
                           <input
-                            id="mc-email"
                             className="newsletter-input"
                             type="email"
+                            name="email"
                             autoComplete="off"
                             placeholder="Enter your email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
                           />
+
                           <button className="newsletter-btn" id="mc-submit">
                             Subscribe
                           </button>
