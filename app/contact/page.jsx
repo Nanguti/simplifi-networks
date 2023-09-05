@@ -20,7 +20,7 @@ const Contact = () => {
       <div className="contact-main-page">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-6 col-md-6 order-1 order-lg-2">
+            <div className="col-lg-6 col-md-12 order-1 order-lg-2">
               <h3 className="contact-page-title">Nairobi, Kenya</h3>
               <div style={{ width: "100%" }}>
                 <iframe
@@ -38,19 +38,23 @@ const Contact = () => {
                 </iframe>
               </div>
             </div>
-            <div style={{ width: "100%" }}>
-              <iframe
-                width="100%"
-                height={600}
-                frameBorder={0}
-                scrolling="no"
-                marginHeight={0}
-                marginWidth={0}
-                src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=uganda+(13%20C/A%20Bazarabusa%20Rd%20(Luthuli%20Drive),%20Bugolobi)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-              >
-                &lt;a href="https://www.maps.ie/population/"&gt;Calculate
-                population in area&lt;/a&gt;
-              </iframe>
+            <div className="col-lg-6 col-md-12 order-2 order-lg-1">
+              <h3 className="contact-page-title">Kampala, Uganda</h3>
+              <div style={{ width: "100%" }}>
+                <iframe
+                  width="100%"
+                  height={400}
+                  frameBorder={0}
+                  scrolling="no"
+                  marginHeight={0}
+                  marginWidth={0}
+                  src="https://maps.google.com/maps?width=100%25&height=400&hl=en&q=13%20C/A%20Bazarabusa%20Rd%20(Luthuli%20Drive),%20Bugolobi+(Simplifi%20Networks)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                >
+                  &lt;a
+                  href="https://www.maps.ie/distance-area-calculator.html"&gt;area
+                  maps&lt;/a&gt;
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
