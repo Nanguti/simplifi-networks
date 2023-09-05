@@ -108,8 +108,8 @@ const Footer = () => {
                       </li>
                       <li className="uren-email">
                         <span>Email:</span>{" "}
-                        <Link href="mailto://info@yourdomain.com">
-                          info@yourdomain.com
+                        <Link href="mailto:simplifinetworks.com/v4/">
+                          Simplifinetworks
                         </Link>
                       </li>
                     </ul>
@@ -170,16 +170,7 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <Link href="#">About Us</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Delivery Information</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Privacy Policy</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Terms &amp; Conditions</Link>
+                            <Link href="/about">About Us</Link>
                           </li>
                         </ul>
                       </div>
@@ -191,13 +182,7 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <Link href="#">Contact Us</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Returns</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Site Map</Link>
+                            <Link href="/contact">Contact Us</Link>
                           </li>
                         </ul>
                       </div>
@@ -209,16 +194,13 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <Link href="#">About Us</Link>
+                            <Link href="/about">About Us</Link>
                           </li>
                           <li>
                             <Link href="#">Delivery Information</Link>
                           </li>
                           <li>
                             <Link href="#">Privacy Policy</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Terms &amp; Conditions</Link>
                           </li>
                         </ul>
                       </div>
@@ -230,16 +212,11 @@ const Footer = () => {
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <Link href="#">My Account</Link>
+                            <Link href="my-account">My Account</Link>
                           </li>
+
                           <li>
-                            <Link href="#">Order History</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Wish List</Link>
-                          </li>
-                          <li>
-                            <Link href="#">Newsletter</Link>
+                            <Link href="/#">Newsletter</Link>
                           </li>
                         </ul>
                       </div>
@@ -257,7 +234,7 @@ const Footer = () => {
                 <div className="col-lg-6 col-md-6">
                   <div className="copyright">
                     <span>
-                      <Link href="Simplifinetworks.net">Simplifinetworks</Link>
+                      <Link href="Simplifinetworks.com">Simplifinetworks</Link>
                     </span>
                   </div>
                 </div>
@@ -276,176 +253,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* Simplifi Networks Footer Area End Here */}
-      {/* Begin Simplifi Networks Modal Area */}
-      <div className="modal fade modal-wrapper" id="exampleModalCenter">
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="modal-body">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-              <div className="modal-inner-area sp-area row">
-                <div className="col-lg-5">
-                  <div className="sp-img_area">
-                    <div
-                      className="sp-img_slider slick-img-slider uren-slick-slider"
-                      data-slick-options='{
-                                "slidesToShow": 1,
-                                "arrows": false,
-                                "fade": true,
-                                "draggable": false,
-                                "swipe": false,
-                                "asNavFor": ".sp-img_slider-nav"
-                                }'
-                    >
-                      <div className="single-slide red">
-                        <img
-                          src="assets/images/product/large-size/1.jpg"
-                          alt="Simplifi Networks Product Image"
-                        />
-                      </div>
-                      <div className="single-slide orange">
-                        <img
-                          src="assets/images/product/large-size/2.jpg"
-                          alt="Simplifi Networks Product Image"
-                        />
-                      </div>
-                      <div className="single-slide brown">
-                        <img
-                          src="assets/images/product/large-size/3.jpg"
-                          alt="Simplifi Networks Product Image"
-                        />
-                      </div>
-                      <div className="single-slide umber">
-                        <img
-                          src="assets/images/product/large-size/4.jpg"
-                          alt="Simplifi Networks Product Image"
-                        />
-                      </div>
-                      <div className="single-slide black">
-                        <img
-                          src="assets/images/product/large-size/5.jpg"
-                          alt="Simplifi Networks Product Image"
-                        />
-                      </div>
-                      <div className="single-slide golden">
-                        <img
-                          src="assets/images/product/large-size/6.jpg"
-                          alt="Simplifi Networks Product Image"
-                        />
-                      </div>
-                    </div>
-                    <div
-                      className="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-3"
-                      data-slick-options='{
-                               "slidesToShow": 4,
-                                "asNavFor": ".sp-img_slider",
-                               "focusOnSelect": true,
-                               "arrows" : true,
-                               "spaceBetween": 30
-                              }'
-                      data-slick-responsive='[
-                                {"breakpoint":1501, "settings": {"slidesToShow": 3}},
-                                {"breakpoint":992, "settings": {"slidesToShow": 4}},
-                                {"breakpoint":768, "settings": {"slidesToShow": 3}},
-                                {"breakpoint":575, "settings": {"slidesToShow": 2}}
-                            ]'
-                    >
-                      <div className="single-slide red">
-                        <img
-                          src="assets/images/product/small-size/1.jpg"
-                          alt="Simplifi Networks Product Thumnail"
-                        />
-                      </div>
-                      <div className="single-slide orange">
-                        <img
-                          src="assets/images/product/small-size/2.jpg"
-                          alt="Simplifi Networks Product Thumnail"
-                        />
-                      </div>
-                      <div className="single-slide brown">
-                        <img
-                          src="assets/images/product/small-size/3.jpg"
-                          alt="Simplifi Networks Product Thumnail"
-                        />
-                      </div>
-                      <div className="single-slide umber">
-                        <img
-                          src="assets/images/product/small-size/4.jpg"
-                          alt="Simplifi Networks Product Thumnail"
-                        />
-                      </div>
-                      <div className="single-slide black">
-                        <img
-                          src="assets/images/product/small-size/5.jpg"
-                          alt="Simplifi Networks Product Thumnail"
-                        />
-                      </div>
-                      <div className="single-slide golden">
-                        <img
-                          src="assets/images/product/small-size/6.jpg"
-                          alt="Simplifi Networks Product Thumnail"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-7 col-lg-6">
-                  <div className="sp-content">
-                    <div className="sp-heading">
-                      <h5>
-                        <Link href="#">NanoBeam AC</Link>
-                      </h5>
-                    </div>
-                    <div className="sp-essential_stuff">
-                      <p> Simple plug and play installation</p>
-                      <p> Versatile mounting options.</p>
-                      <p> Improved noise immunity</p>
-                      <p> Lower latency</p>
-                      <p> Increased throughput</p>
-                      <p> Easy configuration.</p>
-                    </div>
-                    <div className="uren-tag-line">
-                      <h6>Share:</h6>
-                    </div>
-                    <div className="uren-social_link">
-                      <ul>
-                        <li className="facebook">
-                          <Link
-                            href="https://www.facebook.com/"
-                            data-toggle="tooltip"
-                            target="_blank"
-                            title="Facebook"
-                          >
-                            <i className="fab fa-facebook" />
-                          </Link>
-                        </li>
-                        <li className="twitter">
-                          <Link
-                            href="https://twitter.com/"
-                            data-toggle="tooltip"
-                            target="_blank"
-                            title="Twitter"
-                          >
-                            <i className="fab fa-twitter-square" />
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Simplifi Networks Modal Area End Here */}
     </div>
   );
 };
