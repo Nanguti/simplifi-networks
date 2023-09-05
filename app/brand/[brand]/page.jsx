@@ -107,7 +107,7 @@ const ProductsByBrand = ({ params }) => {
                 </div>
                 <div className="product-item-selection_area">
                   <div className="product-short">
-                    <label className="select-label">Short By:</label>
+                    <label className="select-label">Sort By:</label>
                     <select className="myniceselect nice-select">
                       <option value={1}>Default</option>
                       <option value={2}>Name, A to Z</option>
