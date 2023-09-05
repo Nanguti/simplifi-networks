@@ -1,5 +1,9 @@
 "use client";
+import axiosClient from "@/utils/axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +14,7 @@ const RegistrationForm = () => {
     password: "",
     password_confirmation: "",
   });
+  const router = useRouter();
 
   const handleInputChange = (e) => {
     setFormData({
@@ -30,9 +35,12 @@ const RegistrationForm = () => {
       password_confirmation: formData.password_confirmation,
     };
     try {
-      await axiosClient.post("/register", data);
+      const res = await axiosClient.post("/register", data);
+      localStorage.setItem("ACCESS_TOKEN", res.data.token);
+      router.push(`/my-account/?username=123`);
       toast.success("You have successfully registered with Simplifi Networks!");
     } catch (errors) {
+      console.log("log errors from heere " + errors);
       toast.error(`Subscription failed. ${errors.response.data.errors.email}`);
     }
   };
@@ -89,7 +97,7 @@ const RegistrationForm = () => {
               Password *
             </label>
             <input
-              type="text"
+              type="password"
               name="password"
               className="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"
               placeholder="Enter your last name"
@@ -103,7 +111,7 @@ const RegistrationForm = () => {
               Confirm Password *
             </label>
             <input
-              type="text"
+              type="password"
               name="password_confirmation"
               className="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"
               placeholder="Enter your last name"
