@@ -20,7 +20,7 @@ const Contact = () => {
       <div className="contact-main-page">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-6 col-md-12 order-1 order-lg-2">
+            <div className="col-lg-6 col-md-6 order-1 order-lg-2">
               <h3 className="contact-page-title">Nairobi, Kenya</h3>
               <div style={{ width: "100%" }}>
                 <iframe
