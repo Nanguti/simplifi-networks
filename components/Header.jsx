@@ -443,6 +443,12 @@ const Header = () => {
                             <Link href="/blog">Blog</Link>
                           </li>
                           <li>
+                            <Link href="#">News and Articles</Link>
+                          </li>
+                          <li>
+                            <Link href="#">Tech Talks</Link>
+                          </li>
+                          <li>
                             <Link href="#">Webinars</Link>
                           </li>
                           <li>
