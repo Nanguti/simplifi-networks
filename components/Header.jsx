@@ -310,13 +310,13 @@ const Header = () => {
                     <li className="contact-us_wrap">
                       <Link href="tel://+254727401262">
                         <i className="ion-android-call" />
-                        Ke: +254 727 401 262
+                        Kenya: +254 727 401 262
                       </Link>
                     </li>
                     <li className="contact-us_wrap">
                       <Link href="tel://+256758937003">
                         <i className="ion-android-call" />
-                        Ug: +256 758 937 003
+                        Uganda: +256 758 937 003
                       </Link>
                     </li>
                   </ul>
@@ -365,6 +365,12 @@ const Header = () => {
                         <ul className="hm-dropdown">
                           <li>
                             <Link href="/blog">Blog</Link>
+                          </li>
+                          <li>
+                            <Link href="#">News and Articles</Link>
+                          </li>
+                          <li>
+                            <Link href="#">Tech Talks</Link>
                           </li>
                           <li>
                             <Link href="#">Webinars</Link>
