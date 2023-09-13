@@ -473,17 +473,23 @@ const Header = () => {
                           <li>
                             <Link href="/blog">Blog</Link>
                           </li>
+
                           <li>
-                            <Link href="#">News and Articles</Link>
+                            <Link href="/products-catalogs">
+                              Products Catelogs
+                            </Link>
                           </li>
                           <li>
-                            <Link href="#">Tech Talks</Link>
+                            <Link href="/news-articles">News and Articles</Link>
                           </li>
                           <li>
-                            <Link href="#">Webinars</Link>
+                            <Link href="/tech-talks">Tech Talks</Link>
                           </li>
                           <li>
-                            <Link href="#">Newsletter</Link>
+                            <Link href="/webinars">Webinars</Link>
+                          </li>
+                          <li>
+                            <Link href="/newletters">Newsletter</Link>
                           </li>
                         </ul>
                       </li>
