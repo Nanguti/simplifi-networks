@@ -342,13 +342,13 @@ const Header = () => {
                         <Link href="/about">About Us</Link>
                       </li>
                       <li className="">
-                        <Link href="#">Services</Link>
+                        <Link href="/services">Services</Link>
                       </li>
                       <li className="dropdown-holder ">
                         <Link href="#">
                           Support <i className="ion-ios-arrow-down" />
                         </Link>
-                        <ul className="hm-dropdown">
+                        {/* <ul className="hm-dropdown">
                           {brands.map((brand) => (
                             <li key={brand.id}>
                               <Link href={`${brand.brand_url}`} target="_blank">
@@ -356,6 +356,113 @@ const Header = () => {
                               </Link>
                             </li>
                           ))}
+                        </ul> */}
+
+                        <ul className="hm-dropdown">
+                          <li>
+                            <Link
+                              href="https://techspecs.ui.com/"
+                              target="_blank"
+                            >
+                              Ubiquiti Tech Specs
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="https://community.ui.com/"
+                              target="_blank"
+                            >
+                              Ubiquiti Community
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://community.ui.com/"
+                              target="_blank"
+                            >
+                              Ubiquiti Support Forums
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="https://docs.google.com/document/d/1p-z6f6MMBIbKl35v4EwRgKx5YRUyui0iOpzDnq4ZIgc/edit"
+                              target="_blank"
+                            >
+                              MikroTik Quick Guide
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://forum.mikrotik.com/"
+                              target="_blank"
+                            >
+                              MikroTik Support Forum
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://simplifinetworks.com/v4/SimplifiApp/SimplifiApp.zip"
+                              target="_blank"
+                            >
+                              SimplifApp For MiktroTik
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="https://rfelements.com/support"
+                              target="_blank"
+                            >
+                              RF Elements Support
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://www.netstar.in/customer-care/"
+                              target="_blank"
+                            >
+                              Netstar Support
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://www.siklu.com/support/"
+                              target="_blank"
+                            >
+                              Siklu Support
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://community.teltonika-networks.com/"
+                              target="_blank"
+                            >
+                              Teltonika Community
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://wiki.teltonika-networks.com/view/Main_Page"
+                              target="_blank"
+                            >
+                              Teltonika Knowledge Base
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link
+                              href="https://www.tyconsystems.com/crm.asp?action=contactus"
+                              target="_blank"
+                            >
+                              Tycon Systems Support
+                            </Link>
+                          </li>
                         </ul>
                       </li>
                       <li className="dropdown-holder">
@@ -529,7 +636,7 @@ const Header = () => {
                     <Link href="/about">About Us</Link>
                   </li>
                   <li className="">
-                    <Link href="#">Services</Link>
+                    <Link href="/services">Services</Link>
                   </li>
 
                   <li className="menu-item-has-children">
