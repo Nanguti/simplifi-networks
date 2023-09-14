@@ -8,16 +8,22 @@ function Webinars() {
         <div className="w-1/2 px-4 mb-4">
           <div className="relative overflow-hidden rounded-lg">
             {/* Replace the iframe source with your YouTube video URL */}
+
             <iframe
-              src="https://www.youtube.com/watch?v=_EHCwkzpJhU"
-              frameBorder="0"
-              allowFullScreen
               className="w-full h-56 md:h-64 lg:h-72"
+              src="https://www.youtube.com/embed/_EHCwkzpJhU?si=zzAPUTJ_E2ruOyxW"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
             ></iframe>
           </div>
           <div className="mt-2">
-            <p className="text-lg font-semibold">Video Title 1</p>
-            <p className="text-gray-500">Published by Channel Name</p>
+            <p className="text-gray-500">
+              <a href="https://www.youtube.com/watch?v=_EHCwkzpJhU"></a>
+              Watch our webinar with Siklu on Multi-gigabit solutions for East
+              and Central Africa
+            </p>
           </div>
         </div>
 
