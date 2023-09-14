@@ -1,6 +1,10 @@
+import axiosClient from "@/utils/axios";
 import Link from "next/link";
 
-const About = () => {
+const About = async () => {
+  const file_url = process.env.STORAGE_URL;
+  const response = await axiosClient.get("/staff");
+  const staff = response.data.staff;
   return (
     <>
       {/* Begin Simplifi Networks' Breadcrumb Area */}
@@ -17,6 +21,7 @@ const About = () => {
           </div>
         </div>
       </div>
+
       {/* Simplifi Networks' Breadcrumb Area End Here */}
       {/* Begin Simplifi Networks' About Us Area */}
       <div className="about-us-area">
@@ -59,56 +64,7 @@ const About = () => {
       </div>
       {/* Simplifi Networks' About Us Area End Here */}
       {/* Begin Simplifi Networks' Project Countdown Area */}
-      <div className="project-count-area">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="single-count text-center">
-                <div className="count-icon">
-                  <span className="ion-ios-briefcase-outline" />
-                </div>
-                <div className="count-title">
-                  <h2 className="count">2169</h2>
-                  <span>Project Done</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="single-count text-center">
-                <div className="count-icon">
-                  <span className="ion-ios-wineglass-outline" />
-                </div>
-                <div className="count-title">
-                  <h2 className="count">869</h2>
-                  <span>Awards Winned</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="single-count text-center">
-                <div className="count-icon">
-                  <span className="ion-ios-lightbulb-outline" />
-                </div>
-                <div className="count-title">
-                  <h2 className="count">689</h2>
-                  <span>Hours Worked</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="single-count text-center">
-                <div className="count-icon">
-                  <span className="ion-happy-outline" />
-                </div>
-                <div className="count-title">
-                  <h2 className="count">2169</h2>
-                  <span>Happy Customer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* Simplifi Networks' Project Countdown Area End Here */}
       {/* Begin Simplifi Networks' Team Area */}
       <div className="team-area">
@@ -122,74 +78,24 @@ const About = () => {
           </div>{" "}
           {/* section title end */}
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="team-member">
-                <div className="team-thumb img-hover_effect">
-                  <Link href="#">
-                    <img
-                      src="assets/images/about-us/team/1.png"
-                      alt="Our Team Member"
-                    />
-                  </Link>
-                </div>
-                <div className="team-content text-center">
-                  <h3>Ken Stober</h3>
-                  <p>Co-founder</p>
-                </div>
-              </div>
-            </div>{" "}
-            {/* end single team member */}
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="team-member">
-                <div className="team-thumb img-hover_effect">
-                  <Link href="#">
-                    <img
-                      src="assets/images/about-us/team/2.png"
-                      alt="Our Team Member"
-                    />
-                  </Link>
-                </div>
-                <div className="team-content text-center">
-                  <h3>Graham Balcombe</h3>
-                  <p>Co-founder</p>
+            {staff.map((single_staff) => (
+              <div className="col-lg-4 col-md-6 col-sm-6 our-team">
+                <div className="team-member">
+                  <div className="team-thumb img-hover_effect">
+                    <Link href="#">
+                      <img
+                        src={`${file_url}/${single_staff.image}`}
+                        alt={single_staff.title}
+                      />
+                    </Link>
+                  </div>
+                  <div className="team-content text-center">
+                    <h3>{single_staff.name}</h3>
+                    <div>{single_staff.bio}</div>
+                  </div>
                 </div>
               </div>
-            </div>{" "}
-            {/* end single team member */}
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="team-member">
-                <div className="team-thumb img-hover_effect">
-                  <Link href="#">
-                    <img
-                      src="assets/images/about-us/team/3.png"
-                      alt="Our Team Member"
-                    />
-                  </Link>
-                </div>
-                <div className="team-content text-center">
-                  <h3>Regina Kaaria</h3>
-                  <p>Accountant</p>
-                </div>
-              </div>
-            </div>{" "}
-            {/* end single team member */}
-            <div className="col-lg-3 col-md-6 col-sm-6">
-              <div className="team-member">
-                <div className="team-thumb img-hover_effect">
-                  <Link href="#">
-                    <img
-                      src="assets/images/about-us/team/4.jpeg"
-                      alt="Our Team Member"
-                    />
-                  </Link>
-                </div>
-                <div className="team-content text-center">
-                  <h3>Ambrose Ahurra</h3>
-                  <p>Support Engineer</p>
-                </div>
-              </div>
-            </div>{" "}
-            {/* end single team member */}
+            ))}
           </div>
         </div>
       </div>
