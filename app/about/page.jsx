@@ -1,6 +1,15 @@
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
 
+function getRandomGradient() {
+  const gradients = [
+    "bg-gradient-to-r from-blue-500 to-green-500",
+    "bg-gradient-to-r from-red-400 via-purple-500 to-indigo-500",
+    "bg-gradient-to-r from-yellow-300 to-pink-400",
+    // Add more gradient classes as needed
+  ];
+  return gradients[Math.floor(Math.random() * gradients.length)];
+}
 const About = async () => {
   const file_url = process.env.STORAGE_URL;
   const response = await axiosClient.get("/staff");
@@ -78,8 +87,11 @@ const About = async () => {
           </div>{" "}
           {/* section title end */}
           <div className="row">
-            {staff.map((single_staff) => (
-              <div className="col-lg-4 col-md-6 col-sm-6 our-team">
+            {staff.map((single_staff, index) => (
+              <div
+                key={index}
+                className={`col-lg-4 col-md-6 col-sm-6 our-team ${getRandomGradient()}`} // Set random gradient class
+              >
                 <div className="team-member">
                   <div className="team-thumb img-hover_effect">
                     <Link href="#">
@@ -91,7 +103,7 @@ const About = async () => {
                   </div>
                   <div className="team-content text-center">
                     <h3>{single_staff.name}</h3>
-                    <div>{single_staff.bio}</div>
+                    <div className="staff-desc">{single_staff.bio}</div>
                   </div>
                 </div>
               </div>
