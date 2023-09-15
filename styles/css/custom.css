@@ -526,3 +526,13 @@ li:hover > button svg {
   color: #000000;
   padding: 20px;
 }
+
+.img-border-radius {
+  border-radius: 5px;
+}
+
+.uren-paginatoin-area .uren-pagination-box li > a {
+  color: #333333;
+  padding: 0 18px !important;
+  display: block;
+}

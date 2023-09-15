@@ -40,7 +40,7 @@ const About = async () => {
               <div className="overview-img text-center img-hover_effect">
                 <Link href="#">
                   <img
-                    className="img-full"
+                    className="img-full img-border-radius"
                     src="assets/images/about-us/1.jpg"
                     objectFit="cover"
                     layout="fill"
