@@ -40,6 +40,10 @@ const Products = () => {
     console.log("response here " + response);
     setProducts(response.data.products.data);
     setLinks(response.data.products.links);
+    window.scrollTo({
+      top: 400,
+      behavior: "smooth",
+    });
   };
 
   const handleQuickView = (product) => {
