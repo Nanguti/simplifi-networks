@@ -1,6 +1,7 @@
 import BlogSidebar from "@/components/BlogSidebar";
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
+import parse from "html-react-parser";
 
 const PostDetail = async ({ params }) => {
   const slug = params.post_slug;
@@ -49,7 +50,7 @@ const PostDetail = async ({ params }) => {
                 </div>
                 <div className="uren-blog-blockquote">
                   <blockquote>
-                    <p>{description}</p>
+                    <p>{parse(description)}</p>
                   </blockquote>
                 </div>
                 <div className="blog-additional_information">
@@ -103,7 +104,7 @@ const PostDetail = async ({ params }) => {
                     </li>
                   </ul>
                 </div>
-                <div className="uren-comment-section">
+                {/* <div className="uren-comment-section">
                   <h3>03 comment</h3>
                   <ul>
                     <li>
@@ -160,7 +161,7 @@ const PostDetail = async ({ params }) => {
                       </div>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="uren-blog-comment-wrapper">
                   <h3>leave a reply</h3>
                   <p>
@@ -205,10 +206,7 @@ const PostDetail = async ({ params }) => {
                         <div className="col-lg-12">
                           <div className="comment-btn_wrap f-left">
                             <div className="uren-post-btn_area">
-                              <Link
-                                className="uren-btn-2"
-                                href="#"
-                              >
+                              <Link className="uren-btn-2" href="#">
                                 Post comment
                               </Link>
                             </div>
