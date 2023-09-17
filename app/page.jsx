@@ -11,12 +11,10 @@ const Home = async () => {
   return (
     <>
       <div className="uren-slider_area">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="main-slider slider-navigation_style-2">
-                <Banners banners={banners} file_url={file_url} />
-              </div>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="main-slider slider-navigation_style-2">
+              <Banners banners={banners} file_url={file_url} />
             </div>
           </div>
         </div>
