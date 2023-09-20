@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../globals.css";
 import "@/styles/css/vendor/bootstrap.min.css";
 import "@/styles/css/vendor/font-awesome.css";
 import "@/styles/css/vendor/fontawesome-stars.css";

@@ -290,7 +290,7 @@ const ProductDetail = async ({ params }) => {
       <div className="uren-brand_area">
         <div className="container-fluid">
           <div className="section-title_area">
-            <div className="gradient-title">Top Partners</div>
+            <div className="gradient-title">Our Partners</div>
           </div>
           <div className="row">
             <div className="col-lg-12">
