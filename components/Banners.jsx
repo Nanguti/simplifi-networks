@@ -12,6 +12,7 @@ const Banners = ({ banners, file_url }) => {
       autoPlay={true}
       infiniteLoop={true}
       interval={5000}
+      fade={true}
     >
       {banners.map((banner, index) => (
         <div

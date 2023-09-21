@@ -172,53 +172,107 @@ const Footer = () => {
                           <li>
                             <Link href="/about">About Us</Link>
                           </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                      <div className="footer-widgets_title">
-                        <h3>Customer Service</h3>
-                      </div>
-                      <div className="footer-widgets">
-                        <ul>
                           <li>
-                            <Link href="/contact">Contact Us</Link>
+                            <Link href="/services">Services</Link>
+                          </li>
+                          <li>
+                            <Link href="/contact">Contact US</Link>
+                          </li>
+                          <li>
+                            <Link href="/term-conditions">
+                              Terms and Condtions
+                            </Link>
                           </li>
                         </ul>
                       </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                       <div className="footer-widgets_title">
-                        <h3>Extras</h3>
+                        <h3>Resources</h3>
                       </div>
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <Link href="/about">About Us</Link>
+                            <Link href="/blog">Blog</Link>
                           </li>
                           <li>
-                            <Link href="#">Delivery Information</Link>
+                            <Link href="/webinars">Webinars</Link>
                           </li>
                           <li>
-                            <Link href="#">Privacy Policy</Link>
+                            <Link href="/newletters">Newsletters</Link>
                           </li>
                         </ul>
                       </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                       <div className="footer-widgets_title">
-                        <h3>My Account</h3>
+                        <h3>Support</h3>
                       </div>
                       <div className="footer-widgets">
                         <ul>
                           <li>
-                            <Link href="my-account">My Account</Link>
+                            <Link
+                              href="https://community.ui.com/"
+                              target="_blank"
+                            >
+                              Ubiquiti Community
+                            </Link>
                           </li>
+                          <li>
+                            <Link
+                              href="https://community.ubnt.com/t5/custom/page/page-id/Forums"
+                              target="_blank"
+                            >
+                              Ubiquiti Support Forums
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="https://www.rfelements.com/support/"
+                              target="_blank"
+                            >
+                              RF Elements Support
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="https://rfelements.com/support"
+                              target="_blank"
+                            >
+                              Teltonika Community
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="col-lg-3 col-md-6">
+                      <div className="footer-widgets_title">
+                        <h3>Contact US</h3>
+                      </div>
+                      <div className="footer-widgets">
+                        <b>Uganda</b>
+                        <br></br>
+                        <a href="mailto:uganda@simplifinetworks.com">
+                          uganda@simplifinetworks.com
+                        </a>
+                        <br></br>
+                        <a href="tel:+256758937003">+256 758 937 003</a>
+                        <br></br>
+                        <b>International</b>
+                        <br></br>
+                        <a href="mailto:info@simplifinetworks.com">
+                          info@simplifinetworks.com
+                        </a>
+                        <br></br>
 
-                          <li>
-                            <Link href="/#">Newsletter</Link>
-                          </li>
-                        </ul>
+                        <b>Kenya</b>
+                        <br></br>
+                        <a href="mailto:kenya@simplifinetworks.com">
+                          kenya@simplifinetworks.com
+                        </a>
+                        <br></br>
+                        <a href="tel:+254727401262">+254 727 401 262</a>
+                        <br></br>
                       </div>
                     </div>
                   </div>

@@ -542,3 +542,23 @@ li:hover > button svg {
   border-radius: 10px;
   margin: 10px 0px;
 }
+
+.carousel-container .single-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-container .single-slide.active,
+.carousel-container .single-slide.next {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-container .single-slide.active {
+  z-index: 2;
+}
+
+.carousel-container .single-slide.next {
+  z-index: 1;
+}
