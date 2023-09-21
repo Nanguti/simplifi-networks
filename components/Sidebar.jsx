@@ -21,16 +21,6 @@ const Sidebar = () => {
     }
   };
   const handleProductsByBrand = async (slug) => {
-    const storedCategories = JSON.parse(
-      localStorage.getItem("brandSubCategories")
-    );
-
-    if (storedCategories && storedCategories[slug]) {
-      setBrandCategories(storedCategories[slug]);
-    } else {
-      await handleBrandCategories(slug);
-    }
-    localStorage.setItem("brand_slug", slug);
     router.push(`/brand/${slug}`);
   };
 

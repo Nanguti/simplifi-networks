@@ -275,7 +275,7 @@ const ProductDetail = async ({ params }) => {
                 <div className="gradient-title">Related Products</div>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-4 p-4">
+              <div className="flex flex-wrap justify-center gap-4 p-2">
                 {related_products.map((product, index) => (
                   <RelatedProducts
                     key={index}
