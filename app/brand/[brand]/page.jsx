@@ -19,10 +19,10 @@ const ProductsByBrand = ({ params }) => {
     const response = await axiosClient.post("/brand/products", { slug });
     setProducts(response.data.results.data);
     setLinks(response.data.results.links);
-    window.scrollTo({
-      top: 520,
-      behavior: "smooth",
-    });
+    // window.scrollTo({
+    //   top: 520,
+    //   behavior: "smooth",
+    // });
   };
 
   const handlePagination = async (url) => {
