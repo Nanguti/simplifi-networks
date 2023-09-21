@@ -20,7 +20,7 @@ const ProductsByBrand = ({ params }) => {
     setProducts(response.data.results.data);
     setLinks(response.data.results.links);
     window.scrollTo({
-      top: 500,
+      top: 520,
       behavior: "smooth",
     });
   };
