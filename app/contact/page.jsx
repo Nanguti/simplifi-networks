@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import FramerMotion from "@/components/FramerMotion";
 
 const Contact = () => {
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -153,7 +154,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

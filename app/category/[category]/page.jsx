@@ -2,6 +2,7 @@ import ProductCard from "@/components/ProductCard";
 import Sidebar from "@/components/Sidebar";
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
+import FramerMotion from "@/components/FramerMotion";
 
 const ProductsCategory = async ({ params }) => {
   const slug = params.category;
@@ -10,7 +11,7 @@ const ProductsCategory = async ({ params }) => {
 
   const category = response.data.results;
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -138,7 +139,7 @@ const ProductsCategory = async ({ params }) => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

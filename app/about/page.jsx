@@ -1,5 +1,6 @@
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
+import FramerMotion from "@/components/FramerMotion";
 
 function getRandomGradient() {
   const gradients = [
@@ -15,7 +16,7 @@ const About = async () => {
   const response = await axiosClient.get("/staff");
   const staff = response.data.staff;
   return (
-    <>
+    <FramerMotion>
       {/* Begin Simplifi Networks' Breadcrumb Area */}
       <div className="breadcrumb-area">
         <div className="container">
@@ -112,7 +113,7 @@ const About = async () => {
         </div>
       </div>
       {/* Simplifi Networks' Team Area End Here */}
-    </>
+    </FramerMotion>
   );
 };
 

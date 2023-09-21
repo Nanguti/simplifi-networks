@@ -2,6 +2,7 @@ import BlogSidebar from "@/components/BlogSidebar";
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
 import parse from "html-react-parser";
+import FramerMotion from "@/components/FramerMotion";
 
 const PostDetail = async ({ params }) => {
   const slug = params.post_slug;
@@ -12,7 +13,7 @@ const PostDetail = async ({ params }) => {
     response.data.post;
   const recent_posts = response.data.recent_posts;
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -221,7 +222,7 @@ const PostDetail = async ({ params }) => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

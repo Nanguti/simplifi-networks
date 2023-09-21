@@ -5,6 +5,7 @@ import axiosClient from "@/utils/axios";
 import Link from "next/link";
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
+import FramerMotion from "@/components/FramerMotion";
 
 const ProductsByBrand = ({ params }) => {
   const slug = params.brand;
@@ -30,7 +31,7 @@ const ProductsByBrand = ({ params }) => {
     });
   };
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -181,7 +182,7 @@ const ProductsByBrand = ({ params }) => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

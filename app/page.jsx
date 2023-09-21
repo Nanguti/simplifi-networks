@@ -3,13 +3,14 @@ import Brands from "@/components/Brands";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
+import FramerMotion from "@/components/FramerMotion";
 export const revalidate = 0;
 const Home = async () => {
   const file_url = process.env.STORAGE_URL;
   const response = await axiosClient.get(`/home`);
   const { banners, brands, featured_products, posts } = response.data;
   return (
-    <>
+    <FramerMotion>
       <div className="uren-slider_area">
         <div className="row">
           <div className="col-lg-12">
@@ -98,7 +99,7 @@ const Home = async () => {
         </div>
       </div>
       <div className="gradient-container"></div>
-    </>
+    </FramerMotion>
   );
 };
 

@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import parse from "html-react-parser";
 import BeautifulModal from "@/components/BeautifulModal";
+import FramerMotion from "@/components/FramerMotion";
 export const revalidate = 0;
 const Products = () => {
   const file_url = process.env.NEXT_PUBLIC_STORAGE_URL;
@@ -56,7 +57,7 @@ const Products = () => {
     setIsModalOpen(false);
   };
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -213,7 +214,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

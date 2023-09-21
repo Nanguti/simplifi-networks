@@ -4,6 +4,7 @@ import axiosClient from "@/utils/axios";
 import ProductComponent from "@/components/ProductComponent";
 import parse from "html-react-parser";
 import Link from "next/link";
+import FramerMotion from "@/components/FramerMotion";
 
 const ProductDetail = async ({ params }) => {
   const slug = params.product_slug;
@@ -14,7 +15,7 @@ const ProductDetail = async ({ params }) => {
   const related_products = res.data.product_detail.rel_prods;
   const brands = res.data.brands;
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -301,7 +302,7 @@ const ProductDetail = async ({ params }) => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

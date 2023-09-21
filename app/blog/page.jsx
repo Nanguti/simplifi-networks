@@ -1,13 +1,14 @@
 import BlogPost from "@/components/BlogPost";
 import axiosClient from "@/utils/axios";
 import Link from "next/link";
+import FramerMotion from "@/components/FramerMotion";
 
 const Blog = async () => {
   const file_url = process.env.STORAGE_URL;
   const res = await axiosClient.get(`/posts`);
   const posts = res.data.posts.data;
   return (
-    <>
+    <FramerMotion>
       <div className="breadcrumb-area">
         <div className="container">
           <div className="breadcrumb-content">
@@ -41,7 +42,7 @@ const Blog = async () => {
           </div>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 

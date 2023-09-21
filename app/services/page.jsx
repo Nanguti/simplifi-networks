@@ -1,8 +1,8 @@
-import React from "react";
+import FramerMotion from "@/components/FramerMotion";
 
 const Services = () => {
   return (
-    <>
+    <FramerMotion>
       <div class="container mx-auto mt-8 p-4">
         <div class="bg-white p-6 rounded-lg shadow-md">
           <h2 class="text-2xl font-semibold">Design</h2>
@@ -83,7 +83,7 @@ const Services = () => {
           </p>
         </div>
       </div>
-    </>
+    </FramerMotion>
   );
 };
 
