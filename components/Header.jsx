@@ -59,7 +59,7 @@ const Header = () => {
                       <span>Catalogue</span>
                     </h2>
                   </div>
-                  <div id="cate-toggle" className="category-menu-list">
+                  <div class="category-menu-list">
                     <ul>
                       <li className="right-menu">
                         <Link href="#">Browse by Manufacturer</Link>

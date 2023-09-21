@@ -562,3 +562,19 @@ li:hover > button svg {
 .carousel-container .single-slide.next {
   z-index: 1;
 }
+
+.header-top_area .main-menu_area > nav > ul > li .hm-dropdown {
+  margin-top: -10px;
+}
+
+.category-menu-list {
+  display: none; /* Hide the div by default */
+}
+
+.category-menu:hover .category-menu-list {
+  display: block; /* Display the div on hover */
+}
+
+.active-link {
+  color: #f16334;
+}

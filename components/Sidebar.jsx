@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import axiosClient from "@/utils/axios";
 
 const Sidebar = () => {
   const router = useRouter();
   const [brands, setBrands] = useState([]);
   const [brandCategories, setBrandCategories] = useState([]);
+  const path = usePathname();
 
   useEffect(() => {
     fetchMenuItems("/menu-items");
@@ -67,15 +68,19 @@ const Sidebar = () => {
               <li key={brand.id}>
                 <a
                   className={`cursor-pointer ${
-                    localStorage.getItem("brand_slug") === brand.slug
-                      ? "active"
-                      : ""
+                    path === brand.slug ? "text-yellow-600" : ""
                   }`}
                   onClick={() => {
                     handleProductsByBrand(brand.slug);
                   }}
                 >
-                  <span>{brand.title} </span>
+                  <span
+                    className={`cursor-pointer font-semibold ${
+                      path === "/brand/" + brand.slug ? "active-link  " : ""
+                    }`}
+                  >
+                    {brand.title}{" "}
+                  </span>
                 </a>
               </li>
             ))}
